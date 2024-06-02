@@ -40,6 +40,10 @@ $('.multiple-card-slider .carousel').each(function(){
     }
 });
 
+document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+let scrollbarWidth = (window.innerWidth - document.body.clientWidth) + 'px';
+console.log(scrollbarWidth)
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     
@@ -64,10 +68,10 @@ var swiper = new Swiper(".mySwiper", {
         // when window width is >= 480px
         480: {
             grid: {
-                rows: 1,
+                rows: 2,
               },
           slidesPerView: 2,
-          spaceBetween: 20
+          spaceBetween: 20,
         },
         // when window width is >= 640px
         1200: {
@@ -99,7 +103,8 @@ var swiper = new Swiper(".mySwiper", {
                 rows: 1,
               },
           slidesPerView: 2,
-          spaceBetween: 20
+          spaceBetween: 20,
+          
         },
         // when window width is >= 640px
         1200: {
