@@ -1,48 +1,10 @@
-$('.multiple-card-slider .carousel').each(function(){
-    var currentCarouselId = '#' + $(this).attr('id');
-    const multipleItemCarousel = document.querySelector(currentCarouselId);
 
-    if(window.matchMedia("(min-width:576px)").matches){
-        const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-            interval: false,
-            wrap: false
-        })
-        var carouselWidth = $(currentCarouselId + ' .carousel-inner')[0].scrollWidth;
-        var cardWidth = $(currentCarouselId + ' .carousel-item').width();
-        var scrollPosition = 0;    
-        $(currentCarouselId + ' .carousel-upcoming-next-button').on('click', function(){
-            
-            if(scrollPosition <= (carouselWidth - (cardWidth * 4))){
-                if(scrollPosition <= (carouselWidth - (cardWidth * 4.5))){
-                document.querySelector('.carousel-upcoming-next-button').style.display = "flex";
-                document.querySelector('.carousel-upcoming-prev-button').style.display = "flex";
-                }
-                console.log('next');
-                scrollPosition = scrollPosition + cardWidth;
-                $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
-            }
-            else{
-                document.querySelector('.carousel-upcoming-next-button').style.display = "none";
-            }
-        });
-        $(currentCarouselId + ' .carousel-upcoming-prev-button').on('click', function(){
-            if(scrollPosition > cardWidth/2){
-                document.querySelector('.carousel-upcoming-prev-button').style.display = "flex";
-                document.querySelector('.carousel-upcoming-next-button').style.display = "flex";
-                console.log('prev');
-                scrollPosition = scrollPosition - cardWidth;
-                $(currentCarouselId + ' .carousel-inner').animate({scrollLeft: scrollPosition},600);
-            }
-            else if(scrollPosition<=(cardWidth * 5)){
-                document.querySelector('.carousel-upcoming-prev-button').style.display = "none";
-            }
-        });
-    }
-});
 
-document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
-let scrollbarWidth = (window.innerWidth - document.body.clientWidth) + 'px';
-console.log(scrollbarWidth)
+
+
+
+
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
@@ -59,27 +21,29 @@ var swiper = new Swiper(".mySwiper", {
     breakpoints: {
         // when window width is >= 320px
         180: {
-          slidesPerView: 1,
           grid: {
             rows: 1,
           },
-          spaceBetween: 10
+      slidesPerView: 1,
+      spaceBetween: 20,
+      slidesOffsetAfter: 50,
         },
         // when window width is >= 480px
         480: {
             grid: {
-                rows: 2,
+                rows: 1,
               },
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         // when window width is >= 640px
-        1200: {
+        800: {
             grid: {
                 rows: 2,
               },
-          slidesPerView: 4.3,
-          spaceBetween: 40
+          slidesPerView: 4,
+          spaceBetween: 10,
+          slidesOffsetAfter: 1000,
         }
       }
     
@@ -123,6 +87,7 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".iftar-swiper-button-next",
       prevEl: ".iftar-swiper-button-prev",
     },
+    slidesPerView: 1.1
   });
 
   var swiperdoctor = new Swiper(".doctor-swiper", {
@@ -139,21 +104,49 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
   
-
+  const reobserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+      else{
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+  
+  const nobserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+      
+    });
+  });
 
 
 const arrowdown = document.querySelector('.arrow-down');
+const carder = document.querySelector('.carder')
 const personalinfo = document.querySelector('.personal-info');
+
 const personaltoggle = document.querySelector(".side-personal");
 const personalsection = document.querySelector('.personal-section');
 const personalx = document.querySelector('.close-personal');
 const menu = document.getElementById('nav-menu');
 const menuToggle = document.getElementById('nav-menu-toggle');
 const menuClose = document.getElementById('nav-menu-close');
+
+var icon1 = document.getElementById("a");
+var icon2 = document.getElementById("b");
+var icon3 = document.getElementById("c");
+var body = document.querySelector("body");
+
+
 searchicon = document.querySelector('.search-logo');
 searchbar = document.querySelector('#search');
 alerticon = document.querySelector('.alert-icon-div');
 alertparagraph = document.querySelector('.alert-paragraph');
+closealert = document.querySelector('.close-alert');
 
 const closequick = document.querySelector(".close-quick");
 const quicksection = document.querySelector(".quick-section")
@@ -163,6 +156,45 @@ const closepoll = document.querySelector(".close-poll");
 const pollsection = document.querySelector(".poll-section");
 const polltoggle = document.querySelector(".side-poll");
 
+const navlogo = document.querySelector('.nav-logo');
+
+const navitems = document.querySelectorAll(".nav-link");
+const redline = document.querySelectorAll(".red-line");
+const eventers = document.querySelectorAll(".event")
+
+const comiitedpar = document.querySelector('.comitted-par')
+const learnmore = document.querySelector('.learn-more-btn');
+const achevislide = document.querySelectorAll('.unique-swiper-slide');
+
+const carousel = document.querySelector('.carousel-whole-container')
+const upcomingevents  = document.querySelector(".upcoming-events")
+const carouselcontroller = document.querySelector('.first-carousel');
+
+const gallerymedia = document.querySelector(".media-title")
+const gallerytitle = document.querySelector(".title-row")
+const gallery = document.querySelectorAll('.gallery-items')
+
+const swiperslide = document.querySelectorAll(".link-swiper")
+
+const footer = document.querySelector('.footer');
+
+nobserver.observe(footer)
+nobserver.observe(gallerymedia)
+nobserver.observe(gallerytitle)
+nobserver.observe(menuToggle)
+nobserver.observe(navlogo);
+nobserver.observe(carousel);
+nobserver.observe(upcomingevents);
+nobserver.observe(comiitedpar);
+nobserver.observe(learnmore);
+nobserver.observe(carouselcontroller)
+
+gallery.forEach((el)=>nobserver.observe(el));
+navitems.forEach((el)=>reobserver.observe(el));
+redline.forEach((el)=>nobserver.observe(el));
+eventers.forEach((el)=>nobserver.observe(el));
+achevislide.forEach((el)=>nobserver.observe(el));
+swiperslide.forEach((el)=>nobserver.observe(el));
 
 
 
@@ -236,23 +268,38 @@ quicktoggle.addEventListener('click',function(){
 
 
     arrowdown.addEventListener('click',function(){
-    
+        arrowdown.classList.toggle("active");
         personalinfo.classList.toggle("active");
         })
+
+    carder.addEventListener('click',function(){
+      arrowdown.classList.toggle("active");
+      personalinfo.classList.toggle("active");
+      })
         
+        closealert.addEventListener('click', function(){
+          alertparagraph.classList.remove(`visible`);
+          alerticon.classList.remove('visible');
+      })
+      
 
 alerticon.addEventListener('click', function(){
     alertparagraph.classList.toggle(`visible`);
     alerticon.classList.toggle('visible');
 })
 
+
+
 menuToggle.addEventListener('click', function() {
-    menu.classList.add('active');
+    menu.classList.toggle('active');
+    icon1.classList.toggle('a');
+    icon2.classList.toggle('c');
+    icon3.classList.toggle('b');
+    body.classList.toggle('active-nav');
+  
 });
 
-menuClose.addEventListener('click', function() {
-    menu.classList.remove('active');
-});
+
 
 
 searchicon.addEventListener(`click`, function() {

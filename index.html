@@ -28,8 +28,8 @@
                     <img src="Assets/Icon weather-day-sunny (1).svg" class="img-fluid">
                 </div>
                 <div class="day-info">
-                    <div>32 C</div>
-                    <small>Wednesday</small>
+                    <div>32 <sup>o</sup>C</div>
+                    <small>Wednesday, 12 April</small>
                 </div>
             </div>
             <div class="small-top">
@@ -81,14 +81,15 @@
                             </div>
                             <div class="col-md-1 arrow-down">
                                 
-                                ^
+                                <img src="Assets/right arrow.svg" class="img-fluid" alt="" srcset="">
                             </div>
                           </div>
+                          
                         </div>
 
                     </div>
                 </div>
-                <div class="col-11 personal-info">
+                <div class="col-11 personal-info border-bottom-0">
                     <div class="card personal-back border-top-0" >
                         
                           
@@ -108,10 +109,18 @@
                                 <div class="col-12 col-5 col-lg-6">09381039103</div>
                         
                           </div>
-                       
+                          <div class="col-11 microsoft ">
+                                <div class="teams-logo">
+                                    <img src="Assets/microsoft.svg" alt="">
+                                </div>
+                                <div class="teams-text">
+                                    <a href="">Connect on Microsoft Teams..</a>
+                                </div>
+                          </div>
                        
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -139,7 +148,7 @@
                         <img src="Assets/profile.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Info
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -149,7 +158,7 @@
                         <img src="Assets/profile.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Info
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -159,7 +168,7 @@
                         <img src="Assets/profile.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Info
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -172,7 +181,7 @@
                         <img src="Assets/blue.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Information
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +191,7 @@
                         <img src="Assets/blue.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Information
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +201,7 @@
                         <img src="Assets/blue.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Information
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -206,7 +215,7 @@
                         <img src="Assets/shield.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Information
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -216,7 +225,7 @@
                         <img src="Assets/shield.png" class="img-fluid">
                     </div>
                     <div class="profile-text">
-                        Profile Information
+                        <a href="#">Profile Information</a>
                     </div>
                 </div>
             </div>
@@ -252,7 +261,7 @@
                 Strongly-Disagree
             </div>
             <div class="col-12 view-previous">
-                View Previos Polls >
+                <a href="">View Previos Polls ></a>
             </div>
         </div>
     </div>
@@ -286,7 +295,7 @@
                             <img src="assets/logo.png" alt="Logo" class="img-fluid">
                         </div>
                         <div class="nav-menu" id="nav-menu">
-                            <button class="nav-menu-close" id="nav-menu-close">Closer</button>
+                            
                             <a class="nav-link " href="#">About CCED</a>
                             <a class="nav-link" href="#">HSE</a>
                             <a class="nav-link" href="#">Org Chart</a>
@@ -300,13 +309,18 @@
                                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                               </li>
-                            <a class="nav-link" href="#">Media Center</a>
-                            <div class="nav-search navbar-brand" href="#">
+                            <a class="nav-link media-center" href="#">Media Center</a>
+                            <div class="nav-search d-none d-xl-block navbar-brand" href="#">
                                 <input type="search" id="search" class="form-control position-absolute shadow-sm" placeholder="Search">
                                 <img src="assets/search.svg" alt="Logo" class="search-logo img-fluid">
                             </div>
                         </div>
-                        <button class="nav-menu-toggle p-2 me-lg-5" id="nav-menu-toggle">☰</button>
+                        <div class=" hamburger-icon d-block d-xl-none" id="nav-menu-toggle">
+                            <div class="icon-1" id="a"></div>
+                            <div class="icon-2" id="b"></div>
+                            <div class="icon-3" id="c"></div>
+                            <div class="clear"></div>
+                          </div>
                     </div>
                     
                 </div>  
@@ -316,7 +330,11 @@
                     </div>
                     <div class="alert-paragraph ">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos laboriosam velit temporibus sapiente nostrum! Sit, quia? Odio veritatis exercitationem tenetur?
+                        <div class="close-alert">
+                            X
+                        </div>
                     </div>
+                    
                 </div>
                 <div class="comitted-container  d-lg-block z-2 px-5 mx-0 mx-lg-5">
                     <p class="comitted-par">Comitted to <br>Excellancy</p>
@@ -330,7 +348,7 @@
                         
                       <div class="carousel-item carousel-item-control active">
                         <img src="Assets/landing-image.png" class="d-block img-fluid" alt="...">
-                        <div class="carousel-controller d-none d-lg-block z-3">
+                        <div class="carousel-controller first-carousel d-none d-lg-block z-3">
                             <div class="carousel-nav-div">
                                 <div class="carousel-number">01</div>
                                 <div class="carousel-buttons">
@@ -471,8 +489,16 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
             <div class="upcoming-fluid">
                 <div class="container">
                     <div class="row justify-content-xl-between justify-content-center">
-                        <div class="col-12 col-lg-8 d-none d-xl-block">
+                        <div class="col-12 carousel-whole-container col-lg-8 d-none d-xl-block">
                             <div class="upcoming-carousel">
+                                <div class="carousel-upcoming-buttons">
+                                    <button class="carousel-upcoming-button left-arrow" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
+                                        <img src="Assets/right arrow.svg" alt="" srcset="">
+                                      </button>
+                                      <button class="carousel-upcoming-button" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
+                                        <img src="Assets/right arrow.svg" alt="" srcset="">
+                                      </button>
+                                </div>
                                 <div class="announcment">
                                     ANNOUNCMENTS
                                 </div>
@@ -484,43 +510,22 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                                 </div>
                                 <div id="carousel-upcoming-control" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                      <button type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                     </div>
                                     <div class="carousel-inner carousel-upcoming-inner">
                                         
                                       <div class="carousel-item active">
-                                        <div class="carousel-upcoming-buttons">
-                                            <button class="carousel-upcoming-button left-arrow" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                              <button class="carousel-upcoming-button" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                        </div>
+                                        
                                         <img src="Assets/upcoming.png" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="carousel-item">
-                                        <div class="carousel-upcoming-buttons">
-                                            <button class="carousel-upcoming-button left-arrow" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                              <button class="carousel-upcoming-button" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                        </div>
+                                        
                                         <img src="Assets/old-image.png" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="carousel-item">
-                                        <div class="carousel-upcoming-buttons">
-                                            <button class="carousel-upcoming-button left-arrow" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                              <button class="carousel-upcoming-button" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
-                                                <img src="Assets/right arrow.svg" alt="" srcset="">
-                                              </button>
-                                        </div>
+                                       
                                         <img src="Assets/landing-image.png" class="d-block w-100" alt="...">
                                       </div>
                                     </div>
@@ -529,73 +534,79 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                             <div class="upcoming-par">
                                 <h1>Annual CCED Blood Donation</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio mollitia quae iste voluptates repellendus eos.</p>
-                                <div class="read-more">Read More</div>
+                                <p>This day-long affair is a tribute to the selfless heroes who come together to make a difference,<br> one donation at a time.</p>
+                                <div class="read-more">
+                                    <img src="Assets/right arrow.svg" alt="">
+                                    Read More
+                                </div>
                             </div>
 
                         </div>
-                        <div class="col-9 col-xl-3 bg-info p-0">
+                        <div class="col-9 col-xl-3  p-0">
                             <div class="upcoming-events">
                                 <div class="title">
-                                    <div class="container upcoming-title ps-5">
-                                            <h1>Upcoming Events</h1>    
-                                    </div>
+                                            <div class="title-marker">
+                                                <img src="Assets/markero.png" alt="">
+                                            </div>
+                                            <h1>UPCOMING EVENTS</h1>    
+                                    
                                 </div>
                                 <div class="event">
-                                    <div class="container d-flex justify-content-start align-items-center ps-5">
-                                        <div class="red-line me-4"></div>
+                                    <div class="container d-flex justify-content-start align-items-center">
+                                        <div class="red-line "></div>
                                         <div class="event-content">
-                                            <div class="h2"> Visit</div>
+                                            
+                                            <div class="h2"> Opal Visit to CCED HQ</div>
                                             <div class="d-flex ">
                                                 <div class="upcoming-icon">
                                                     <img src="Assets/calendar.svg" class="img-fluid">
                                                 </div>
-                                                <div class="upcoming-date ms-2">sad</div>
+                                                <div class="upcoming-date ">Monday Jan 13 2022 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="event">
                                     <div class="container d-flex justify-content-start align-items-center ps-5">
-                                        <div class="red-line yellow me-4"></div>
+                                        <div class="red-line yellow "></div>
                                         <div class="event-content">
                                             <div class="h2"> Eid-al-adha</div>
                                             <div class="d-flex ">
                                                 <div class="upcoming-icon">
                                                     <img src="Assets/calendar.svg" class="img-fluid yellow-calendar">
                                                 </div>
-                                                <div class="upcoming-date ms-2">sad</div>
+                                                <div class="upcoming-date ">Tuesday Feb 05 2022</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="date ps-5 pt-2">
+                                <div class="date ">
                                     <h2>February</h2>
                                 </div>
                                 <div class="event">
                                     <div class="container d-flex justify-content-start align-items-center ps-5">
-                                        <div class="red-line me-4"></div>
+                                        <div class="red-line"></div>
                                         <div class="event-content">
                                             <div class="h2"> asdl</div>
                                             <div class="d-flex ">
                                                 <div class="upcoming-icon">
                                                     <img src="Assets/calendar.svg" class="img-fluid">
                                                 </div>
-                                                <div class="upcoming-date ms-2">sad</div>
+                                                <div class="upcoming-date ">Wednesday Jan 26 2022</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="event">
                                     <div class="container d-flex justify-content-start align-items-center ps-5">
-                                        <div class="red-line me-4"></div>
+                                        <div class="red-line "></div>
                                         <div class="event-content">
                                             <div class="h2"> Visit</div>
                                             <div class="d-flex ">
                                                 <div class="upcoming-icon">
                                                     <img src="Assets/calendar.svg" class="img-fluid">
                                                 </div>
-                                                <div class="upcoming-date ms-2">sad</div>
+                                                <div class="upcoming-date">Wednesday Jan 26 2022</div>
                                             </div>
                                         </div>
                                     </div>
@@ -624,7 +635,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                 
                 <div class="galleryswiper mySwiper">
                     <div class="swiper-wrapper  gallery-swiper-wrapper">
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container">
                                 <img src="Assets/gallery-mountain.svg" class="img-fluid">
@@ -637,7 +648,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container expenses">
                                 <img src="Assets/corp-interest-expenses-svgrepo-com.svg" class="img-fluid" alt="">
@@ -650,7 +661,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container document">
                                 <img src="Assets/document-outline-svgrepo-com.svg" alt="">
@@ -663,7 +674,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container">
                                 <img src="Assets/laptop-open-svgrepo-com.svg" alt="">
@@ -676,7 +687,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container">
                                 <img src="Assets/Group 2333.svg" alt="">
@@ -689,7 +700,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container">
                                 <img src="Assets/star-svgrepo-com.svg" alt="">
@@ -702,7 +713,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container">
                                 <img src="Assets/shield-cross-svgrepo-com.svg" alt="">
@@ -715,7 +726,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             </div>
                         </div>
                       </div>
-                      <div class="swiper-slide col">
+                      <div class="swiper-slide link-swiper col">
                         <div class="gallery-item-container">
                             <div class="gallery-img-container projects">
                                 <img src="Assets/certification-svgrepo-com.svg" alt="">
@@ -790,6 +801,12 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
         </div>         
               
         <div class="media-gallery-container g-0">
+            <div class="back-marker">
+                <img src="Assets/marker.png" class="">
+            </div>
+            <div class="back-marker-second">
+                <img src="Assets/marker.png" class="">
+            </div>
             <div class="a-gallery">
                 <svg viewbox="0 0 10 2" class="a-gallery">
                     <text x="5" y="2" text-anchor="middle" font-size="1.75" fill="none" stroke-width=".009" stroke="#ECECEC" font-family="sans-serif">A GALLERY</text>
@@ -798,7 +815,7 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
           <div class="container media-title g-0">
              DISCOVER OUR
           </div>
-          <div class="container g-0">
+          <div class="container media-item-container g-0">
             <div class="row title-row justify-content-center justify-content-xl-between g-0">
                 <div class="col-8 col-lg-5 d-flex  align-items-center text-center media-image-title">
                     <img src="Assets/Group 437.png" class="img-fluid">
@@ -850,7 +867,20 @@ Lorem ipsu adipisicing elit. Reprehenderit voluptas veritatis tenetur mollitia a
                             Annual Iftar
                         </div>
                     </div>
-                    <button class="btn rounded-pill  browse-button text-center" data-bs-toggle="modal" data-bs-target="#imageModal"> Browse Media</button> 
+                    <button class="btn rounded-pill  browse-button text-center" > 
+                        <a href="">
+                            BROWSE MEDIA
+                        </a>
+                    </button> 
+                </div>
+                <div class="button-div d-block d-xl-none">
+                <a href="" class="w-100">
+                    <button class=" rounded-pill browse-button  browse-button-s text-center" >
+                    
+                        Browse Media
+                    
+                    </button> 
+                </a>
                 </div>
             </div>
             
