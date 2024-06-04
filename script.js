@@ -1,6 +1,41 @@
 
 
 
+$(document).ready(function() {
+  $(document).on('click', '.carder', function(e) {
+   
+      $(this).find(".arrow-down").toggleClass("active")
+      $(this).closest('.card-container').find('.personal-info').toggleClass("active"); // Toggle the class
+      
+      if ($(this).closest('.card-container').find('.personal-info').hasClass('active')){
+       
+        $(this).closest('.card-container').find('.personal-info').css('z-index', '3');
+      console.log("activated")
+        
+      }
+      else{
+        $(this).closest('.card-container').find('.personal-info').css('z-index', '-1');
+        console.log("deactivated")
+      }
+      e.preventDefault();
+  });
+});
+
+
+
+$('.search-bar-personal').on('keyup', function() {
+  
+  var searchTerm = $(this).val().toLowerCase();
+  $('.carder').each(function() { // Target individual cards
+      var cardTitle = $(this).find('.card-title').text().toLowerCase();
+      var cardText = $(this).find('.card-text').text().toLowerCase();
+      if (cardTitle.includes(searchTerm) || cardText.includes(searchTerm)) {
+          $(this).css('display', 'block'); // Show the card
+      } else {
+          $(this).css('display', 'none'); // Hide the card
+      }
+  });
+});
 
 
 
@@ -143,6 +178,8 @@ const srcollobserver = new IntersectionObserver(entries => {
 });
 
 const arrowdown = document.querySelector('.arrow-down');
+
+const carders = document.querySelectorAll(".carder");
 const carder = document.querySelector('.carder')
 const personalinfo = document.querySelector('.personal-info');
 
@@ -283,20 +320,19 @@ quicktoggle.addEventListener('click',function(){
             quicksection.classList.remove("active");
             })
 
-            let arrayo = [ arrowdown, carder]
-            console.log(arrayo)
+          //   let arrayo = [ arrowdown, carder]
+          //   console.log(arrayo)
 
-            arrayo.forEach(function(elem) {
-              console.log("good")
-              elem.addEventListener('click',function(){
-        
-              arrowdown.classList.toggle("active");
-              personalinfo.classList.toggle("active");
-            })
-          });
+          //   carders.forEach(function(elem) {
+          //     console.log("good")
+          //     elem.addEventListener('click',function(){
+          //     elem.classList.toggle("active");
+          //     arrowdown.classList.toggle("active");
+              
+          //   })
+          // });
           
-    //         
-
+         
     // arrowdown.addEventListener('click',function(){
       
     
