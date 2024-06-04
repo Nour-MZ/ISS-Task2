@@ -25,13 +25,25 @@ $(document).ready(function() {
 
 $('.search-bar-personal').on('keyup', function() {
   
+  
   var searchTerm = $(this).val().toLowerCase();
-  $('.carder').each(function() { // Target individual cards
+  console.log(searchTerm)
+
+  $('.carder').each(function() { 
+    $(this).css('display', 'none');
+    // Target individual cards
       var cardTitle = $(this).find('.card-title').text().toLowerCase();
       var cardText = $(this).find('.card-text').text().toLowerCase();
-      if (cardTitle.includes(searchTerm) || cardText.includes(searchTerm)) {
+      if(searchTerm === ""){
+      
+        $(this).css('display', 'none');
+      }
+      
+      else if (cardTitle.includes(searchTerm) || cardText.includes(searchTerm)) {
           $(this).css('display', 'block'); // Show the card
-      } else {
+      } 
+      
+      else {
           $(this).css('display', 'none'); // Hide the card
       }
   });
