@@ -42,8 +42,8 @@ var swiper = new Swiper(".mySwiper", {
                 rows: 2,
               },
           slidesPerView: 4,
-          spaceBetween: 10,
-          slidesOffsetAfter: 1000,
+          spaceBetween: 35,
+          
         }
       }
     
@@ -124,6 +124,23 @@ var swiper = new Swiper(".mySwiper", {
     });
   });
 
+  
+
+  
+
+const htmlsec = document.documentElement;
+
+
+
+const srcollobserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      htmlsec.classList.add('visible');
+      console.log("goo")
+    }
+    
+  });
+});
 
 const arrowdown = document.querySelector('.arrow-down');
 const carder = document.querySelector('.carder')
@@ -162,8 +179,8 @@ const navitems = document.querySelectorAll(".nav-link");
 const redline = document.querySelectorAll(".red-line");
 const eventers = document.querySelectorAll(".event")
 
-const comiitedpar = document.querySelector('.comitted-par')
-const learnmore = document.querySelector('.learn-more-btn');
+const comiitedpar = document.querySelectorAll('.comitted-par')
+const learnmore = document.querySelectorAll('.learn-more-btn');
 const achevislide = document.querySelectorAll('.unique-swiper-slide');
 
 const carousel = document.querySelector('.carousel-whole-container')
@@ -178,6 +195,7 @@ const swiperslide = document.querySelectorAll(".link-swiper")
 
 const footer = document.querySelector('.footer');
 
+srcollobserver.observe(carousel)
 nobserver.observe(footer)
 nobserver.observe(gallerymedia)
 nobserver.observe(gallerytitle)
@@ -185,10 +203,10 @@ nobserver.observe(menuToggle)
 nobserver.observe(navlogo);
 nobserver.observe(carousel);
 nobserver.observe(upcomingevents);
-nobserver.observe(comiitedpar);
-nobserver.observe(learnmore);
 nobserver.observe(carouselcontroller)
 
+learnmore.forEach((el)=>nobserver.observe(el))
+comiitedpar.forEach((el)=>nobserver.observe(el));
 gallery.forEach((el)=>nobserver.observe(el));
 navitems.forEach((el)=>reobserver.observe(el));
 redline.forEach((el)=>nobserver.observe(el));
@@ -265,17 +283,29 @@ quicktoggle.addEventListener('click',function(){
             quicksection.classList.remove("active");
             })
 
+            let arrayo = [ arrowdown, carder]
+            console.log(arrayo)
 
+            arrayo.forEach(function(elem) {
+              console.log("good")
+              elem.addEventListener('click',function(){
+        
+              arrowdown.classList.toggle("active");
+              personalinfo.classList.toggle("active");
+            })
+          });
+          
+    //         
 
-    arrowdown.addEventListener('click',function(){
-        arrowdown.classList.toggle("active");
-        personalinfo.classList.toggle("active");
-        })
+    // arrowdown.addEventListener('click',function(){
+      
+    
+    //     personalinfo.classList.toggle("active");
+    //     arrowdown.classList.toggle("active");
+        
+    //     })
 
-    carder.addEventListener('click',function(){
-      arrowdown.classList.toggle("active");
-      personalinfo.classList.toggle("active");
-      })
+   
         
         closealert.addEventListener('click', function(){
           alertparagraph.classList.remove(`visible`);
