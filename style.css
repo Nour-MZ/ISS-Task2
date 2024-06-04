@@ -1272,7 +1272,7 @@ a{
   /* achievements */
 
   .carousel-container{
-    border-top: 5px solid yellow;
+    border-top: 5px solid var(--cta-color);
     background-color: var(--side-white);
     width: var(--large-width) !important;
     
