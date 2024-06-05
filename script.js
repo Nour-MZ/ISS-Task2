@@ -4,6 +4,28 @@
 $(document).ready(function() {
   $(document).on('click', '.carder', function(e) {
    
+    
+    e.preventDefault();
+});
+
+$(function() {
+    
+  $(".imgLiquidFill").imgLiquid({
+      fill: true,
+      horizontalAlign: "center",
+      verticalAlign: "center"
+  });
+  
+  $(".imgLiquidNoFill").imgLiquid({
+      fill: false,
+      horizontalAlign: "center",
+      verticalAlign: "50%"
+  });
+  
+});
+
+  $(document).on('click', '.carder', function(e) {
+   
       $(this).find(".arrow-down").toggleClass("active")
       $(this).closest('.card-container').find('.personal-info').toggleClass("active"); // Toggle the class
       
@@ -60,7 +82,8 @@ $(window).scroll(function() {
     $('.hero-nav').removeClass('active');} 
     
   else if($(window).scrollTop() > 130){
-    
+    $(".white-logo").css('display',"none")
+    $(".colored-logo").css('display',"block")
     $('.hero-nav').addClass('active'); 
     $('.hero-nav').css('opacity', 1);
     $('.hero-nav').css('transform', 'none'); 
@@ -293,6 +316,8 @@ const swiperslide = document.querySelectorAll(".link-swiper")
 const footercontainer = document.querySelector('.footer-container');
 const footer = document.querySelector('.footer');
 
+const blackoverlay = document.querySelector(".black-overlay");
+
 srcollobserver.observe(carousel)
 nobserver.observe(footer)
 nobserver.observe(gallerymedia)
@@ -318,6 +343,7 @@ personaltoggle.addEventListener('click',function(){
     personaltoggle.classList.toggle("active");
     polltoggle.classList.remove("active");
     quicktoggle.classList.remove("active");
+    blackoverlay.classList.toggle("active");
 
     personalsection.classList.toggle("active");
     pollsection.classList.remove("active");
@@ -329,6 +355,7 @@ personaltoggle.addEventListener('click',function(){
         personaltoggle.classList.toggle("active");
         polltoggle.classList.remove("active");
         quicktoggle.classList.remove("active");
+        blackoverlay.classList.remove("active");
 
         personalsection.classList.toggle("active");
         pollsection.classList.remove("active");
@@ -336,10 +363,24 @@ personaltoggle.addEventListener('click',function(){
         })
     
 
+        quicktoggle.addEventListener('click',function(){
+          quicktoggle.classList.toggle("active");
+          personaltoggle.classList.remove("active");
+          polltoggle.classList.remove("active");
+          blackoverlay.classList.toggle("active");
+
+          personalsection.classList.remove("active");
+      
+          pollsection.classList.remove("active");
+          
+          quicksection.classList.toggle("active");
+          })
+
 closequick.addEventListener('click',function(){
     quicktoggle.classList.toggle("active");
     polltoggle.classList.remove("active");
     personaltoggle.classList.remove("active");
+    blackoverlay.classList.remove("active");
 
     quicksection.classList.toggle("active");
     pollsection.classList.remove("active");
@@ -347,23 +388,15 @@ closequick.addEventListener('click',function(){
    
     })
 
-quicktoggle.addEventListener('click',function(){
-    quicktoggle.classList.toggle("active");
-    personaltoggle.classList.remove("active");
-    polltoggle.classList.remove("active");
 
-    personalsection.classList.remove("active");
-
-    pollsection.classList.remove("active");
-    
-    quicksection.classList.toggle("active");
-    })
 
     polltoggle.addEventListener('click',function(){
         polltoggle.classList.toggle("active");
         personaltoggle.classList.remove("active");
         quicktoggle.classList.remove("active");
-    
+        blackoverlay.classList.toggle("active");
+
+
         pollsection.classList.toggle("active");
         personalsection.classList.remove("active");
         quicksection.classList.remove("active");
@@ -374,33 +407,13 @@ quicktoggle.addEventListener('click',function(){
             polltoggle.classList.toggle("active");
             personaltoggle.classList.remove("active");
             quicktoggle.classList.remove("active");
-    
+            blackoverlay.classList.remove("active");
             
             pollsection.classList.toggle("active");
             personalsection.classList.remove("active");
             quicksection.classList.remove("active");
             })
 
-          //   let arrayo = [ arrowdown, carder]
-          //   console.log(arrayo)
-
-          //   carders.forEach(function(elem) {
-          //     console.log("good")
-          //     elem.addEventListener('click',function(){
-          //     elem.classList.toggle("active");
-          //     arrowdown.classList.toggle("active");
-              
-          //   })
-          // });
-          
-         
-    // arrowdown.addEventListener('click',function(){
-      
-    
-    //     personalinfo.classList.toggle("active");
-    //     arrowdown.classList.toggle("active");
-        
-    //     })
 
    
         
