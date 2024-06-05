@@ -901,6 +901,10 @@ a{
     cursor: pointer;
 }
 
+.colored-logo{
+    display: none;
+}
+
 .nav-logo.visible{
     opacity: 1;
     transform: translateX(0);
@@ -912,7 +916,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-bottom: 15px;
 }
 
 .nav-menu>.nav-link{

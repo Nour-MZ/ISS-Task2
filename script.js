@@ -46,12 +46,15 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
   if ($(window).scrollTop() >= 0 && $(window).scrollTop() <60 ){
+    $(".colored-logo").css('display',"none")
+    $(".white-logo").css('display',"block")
     $('.hero-nav').css('opacity', 1);
     $('.hero-nav').removeClass('active');
     $('.hero-nav').css('transform', 'none');
   }
   if ($(window).scrollTop() > 70 && $(window).scrollTop() <120 ) {
-    
+    $(".white-logo").css('display',"none")
+    $(".colored-logo").css('display',"block")
     $('.hero-nav').css('opacity', 0);
     $('.hero-nav').css('transform', 'translateY(-50px)');
     $('.hero-nav').removeClass('active');} 
