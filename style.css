@@ -634,7 +634,7 @@ a{
 
 .poll-answer.active{
     color: red !important;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .poll-answer.clicked{
