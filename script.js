@@ -44,6 +44,29 @@ $(document).ready(function() {
   });
 });
 
+$(window).scroll(function() {
+  if ($(window).scrollTop() >= 0 && $(window).scrollTop() <60 ){
+    $('.hero-nav').css('opacity', 1);
+    $('.hero-nav').removeClass('active');
+    $('.hero-nav').css('transform', 'none');
+  }
+  if ($(window).scrollTop() > 70 && $(window).scrollTop() <120 ) {
+    
+    $('.hero-nav').css('opacity', 0);
+    $('.hero-nav').css('transform', 'translateY(-50px)');
+    $('.hero-nav').removeClass('active');} 
+    
+  else if($(window).scrollTop() > 130){
+    
+    $('.hero-nav').addClass('active'); 
+    $('.hero-nav').css('opacity', 1);
+    $('.hero-nav').css('transform', 'none'); 
+  }
+   else {
+  
+  }
+});
+
 
 $('.search-bar-personal').on('keyup', function() {
   
@@ -280,7 +303,7 @@ nobserver.observe(carouselcontroller)
 learnmore.forEach((el)=>nobserver.observe(el))
 comiitedpar.forEach((el)=>nobserver.observe(el));
 gallery.forEach((el)=>nobserver.observe(el));
-navitems.forEach((el)=>reobserver.observe(el));
+navitems.forEach((el)=>nobserver.observe(el));
 redline.forEach((el)=>nobserver.observe(el));
 eventers.forEach((el)=>nobserver.observe(el));
 achevislide.forEach((el)=>nobserver.observe(el));
