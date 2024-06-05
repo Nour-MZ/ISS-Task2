@@ -1229,9 +1229,12 @@ a{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #8E8C8C;
-    padding-bottom: 10%;
+    padding-bottom: 7%;
 }
 
+.carousel-number{
+    font-size: 20px;
+}
 
 .carousel-buttons{
     display: flex;
@@ -1239,6 +1242,7 @@ a{
     justify-content: space-between;
 }
 .carousel-but{
+    margin-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1271,8 +1275,12 @@ a{
 
 .carousel-par{
     padding-top: 10%;
-    font-size: 16px;
+    
     line-height: 200%;
+    padding-bottom: 10%;
+    font-size: 16px;
+    word-spacing: 0px;
+    text-align: left
     
 }
 
@@ -2619,6 +2627,22 @@ color: #BAC4C5;
 
 
 @media (max-width: 1200px) {
+    .carousel-controller{
+        padding: 4%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 40%;
+        width: 25%;
+        
+       
+    }
+
+    .carousel-par{
+        font-size: 14px;
+        line-height: 150%;
+    }
+    
     .link-swiper.visible{
         opacity:1;
         transform: translate(0);

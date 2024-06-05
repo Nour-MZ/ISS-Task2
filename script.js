@@ -32,12 +32,14 @@ $(document).ready(function() {
         $otherperc.addClass("active");
         $otherint = parseInt($otherperc.html());
         $otherback.css('transform', 'translate(' + (-100+$otherint) + '%)');
-  })
+        $(document).off('click', '.poll-answer');
+        e.preventDefault();
+      })
     
     
     $(this).addClass("clicked");
     
-      
+    
     
   });
 });
