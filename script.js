@@ -254,7 +254,7 @@ const srcollobserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       htmlsec.classList.add('visible');
-      console.log("goo")
+     
     }
     
   });
@@ -340,10 +340,17 @@ swiperslide.forEach((el)=>nobserver.observe(el));
 
 
 personaltoggle.addEventListener('click',function(){
+  if($(".personal-section").hasClass("active")){
+    blackoverlay.classList.remove("active");
+  }
+  else{
+    blackoverlay.classList.add("active");
+  }
+
     personaltoggle.classList.toggle("active");
     polltoggle.classList.remove("active");
     quicktoggle.classList.remove("active");
-    blackoverlay.classList.toggle("active");
+    
 
     personalsection.classList.toggle("active");
     pollsection.classList.remove("active");
@@ -364,10 +371,17 @@ personaltoggle.addEventListener('click',function(){
     
 
         quicktoggle.addEventListener('click',function(){
+          if($(".quick-section").hasClass("active")){
+            blackoverlay.classList.remove("active");
+          }
+          else{
+            blackoverlay.classList.add("active");
+          }
+          
           quicktoggle.classList.toggle("active");
           personaltoggle.classList.remove("active");
           polltoggle.classList.remove("active");
-          blackoverlay.classList.toggle("active");
+         
 
           personalsection.classList.remove("active");
       
@@ -391,10 +405,17 @@ closequick.addEventListener('click',function(){
 
 
     polltoggle.addEventListener('click',function(){
-        polltoggle.classList.toggle("active");
+      if($(".poll-section").hasClass("active")){
+        blackoverlay.classList.remove("active");
+      }
+      else{
+        blackoverlay.classList.add("active");
+      }  
+      
+      polltoggle.classList.toggle("active");
         personaltoggle.classList.remove("active");
         quicktoggle.classList.remove("active");
-        blackoverlay.classList.toggle("active");
+        
 
 
         pollsection.classList.toggle("active");
