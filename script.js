@@ -264,6 +264,7 @@ const gallery = document.querySelectorAll('.gallery-items')
 
 const swiperslide = document.querySelectorAll(".link-swiper")
 
+const footercontainer = document.querySelector('.footer-container');
 const footer = document.querySelector('.footer');
 
 srcollobserver.observe(carousel)
