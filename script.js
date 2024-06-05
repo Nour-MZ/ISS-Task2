@@ -19,8 +19,28 @@ $(document).ready(function() {
       }
       e.preventDefault();
   });
-});
 
+  $(document).on('click', '.poll-answer', function(e) {
+    $('.poll-answer').not(this).removeClass('clicked');
+
+    e.preventDefault();
+
+    $(".poll-answer").each(function(){
+        $otherperc = $(this).find(".poll-percentage")
+        $otherback = $(this).find(".poll-background")
+        $(this).addClass("active");
+        $otherperc.addClass("active");
+        $otherint = parseInt($otherperc.html());
+        $otherback.css('transform', 'translate(' + (-100+$otherint) + '%)');
+  })
+    
+    
+    $(this).addClass("clicked");
+    
+      
+    
+  });
+});
 
 
 $('.search-bar-personal').on('keyup', function() {

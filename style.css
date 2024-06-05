@@ -618,19 +618,69 @@ a{
     font-weight: 400;
     margin-top: 20px;
     padding: 19px;
-    padding-left: 25px;
+    padding-left: 50px;
+    padding-right:  30px;
     font-size: 17px;
     background-color: white;
     border-radius: 10px;
     transition: all 1s;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    
 }
 
-.poll-answer:hover{
-    color: black;
-    background-color: green;
-    color: white;
+.poll-answer.active{
+    color: red !important;
+    font-size: 20px;
 }
+
+.poll-answer.clicked{
+    border: 1px solid red;
+    color: red !important;
+    font-size: 20px;
+}
+
+
+
+.poll-answer>a{
+    color: inherit !important;
+    z-index: 99;
+}
+
+.poll-background{
+    position: absolute;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transition: all 0.8s;
+}
+
+
+.poll-percentage{
+    visibility: none;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s color 0.3s font-size 0.3s;
+   
+}
+
+.poll-percentage.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-30px);
+}
+
+
+
+
+
 
 .view-previous>*{
    
