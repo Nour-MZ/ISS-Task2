@@ -447,12 +447,15 @@ const swiperslide = document.querySelectorAll(".link-swiper")
 const footercontainer = document.querySelector('.footer-container');
 const footer = document.querySelector('.footer');
 
+const heronav = document.querySelector('.hero-nav');
+
 const blackoverlay = document.querySelector(".black-overlay");
 
 
 
 
 srcollobserver.observe(carousel)
+
 
 nobserver.observe(menu)
 nobserver.observe(footer)
