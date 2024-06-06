@@ -301,12 +301,13 @@ body.active-nav{
 
 
 .carder{
-    margin-top: 20px;
+ 
     cursor: pointer;
     border: none !important;
     border-bottom: 1px solid #EEEEEE !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
+    margin-bottom: 20px;
 }
 
 .carder .card-body{
@@ -370,6 +371,8 @@ body.active-nav{
 
 
 .personal-info{
+   
+    margin-top: -22px;
     opacity: 0;
     z-index: -3;
     transform: translateY(-100px);
@@ -396,6 +399,7 @@ body.active-nav{
 }
 .personal-back{
     border: none !important;
+    
     background-color: #FCFCFC;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -1012,23 +1016,14 @@ a{
     z-index: 99;
     font-weight: 0;
     font-size: 18px;
-    transition: all 0.3s, opacity 0.3s 0.5s, transform 0.3s 0.5s;
+   
 }
 
 
 
 
 
-.nav-search>img{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        height: 30px;
-        width: 30px;
-        transform: translate(0);
 
-
-}
 
 .hamburger-icon{
     position: sticky;
@@ -1088,12 +1083,21 @@ a{
     opacity: 0;
   }
 
+  .nav-search>img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    transform: translate(0);
 
+
+}
 
 .search-logo{
     z-index: 99;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(22deg) brightness(109%) contrast(101%);
     margin-left: 50px !important;
     
@@ -1109,7 +1113,7 @@ a{
 .show-search {
     
     opacity: 1 !important;
-    transform: translateY(40px) !important;
+    transform: translateY(10px) !important;
    
     
   }
@@ -1120,9 +1124,9 @@ a{
     top: 0;
     right: 0px;
     z-index: 9999 !important;
-    width: 30%;
-    opacity: 0;
-
+    width: 15%;
+    opacity: 1;
+    margin-right: 100px;
     position: absolute;
   }
 
