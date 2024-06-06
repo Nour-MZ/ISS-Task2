@@ -266,7 +266,7 @@ const typingobserver = new IntersectionObserver((entries) => {
     else
     var firstpar = new Typed('#first-par', {
       strings: [' ','Comitted to <br> Excellancy'],
-      typeSpeed: 15,
+      typeSpeed: 30,
       showCursor: false,
       
     });
@@ -287,7 +287,7 @@ const typingobserverx = new IntersectionObserver((entries) => {
     else
     var secondpar = new Typed('#second-par', {
       strings: ['Lorem In <br> Excellancy'],
-      typeSpeed: 15,
+      typeSpeed: 30,
       showCursor: false,
       
     });
@@ -308,7 +308,7 @@ const typingobservery = new IntersectionObserver((entries) => {
     else
     var thirdpar = new Typed('#third-par', {
       strings: ['Flowing with <br> Excellancy'],
-      typeSpeed: 15,
+      typeSpeed: 30,
       showCursor: false,
       
     });
@@ -451,6 +451,7 @@ const blackoverlay = document.querySelector(".black-overlay");
 
 
 
+
 srcollobserver.observe(carousel)
 
 nobserver.observe(menu)
@@ -473,6 +474,12 @@ achevislide.forEach((el)=>nobserver.observe(el));
 swiperslide.forEach((el)=>nobserver.observe(el));
 
 
+blackoverlay.addEventListener('click',function(){
+  personalsection.classList.remove("active");
+  pollsection.classList.remove("active");
+  quicksection.classList.remove("active");
+  blackoverlay.classList.remove("active");
+})
 
 personaltoggle.addEventListener('click',function(){
   if($(".personal-section").hasClass("active")){
