@@ -1453,6 +1453,7 @@ a{
     font-family: Calibri;
 }
 
+
 .absolute-marker{
     position: absolute;
     z-index: 0;
@@ -1800,6 +1801,10 @@ a{
 .carousel-upcoming-button.left-arrow:hover{
     background-color: var(--cta-color) !important;
 }
+.carousel-upcoming-button.emission-prev-but{
+    background-color: var(--red-color) !important;
+}
+
 .carousel-upcoming-prev-button{
     display: none;
   
