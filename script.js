@@ -478,6 +478,11 @@ blackoverlay.addEventListener('click',function(){
   personalsection.classList.remove("active");
   pollsection.classList.remove("active");
   quicksection.classList.remove("active");
+
+  personaltoggle.classList.remove("active");
+    polltoggle.classList.remove("active");
+    quicktoggle.classList.remove("active");
+
   blackoverlay.classList.remove("active");
 })
 
