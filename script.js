@@ -252,9 +252,78 @@ function countUp(el, end, duration,sign) {
 }
 
 
+const typingobserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+   
+    if( !entry.isIntersecting ) {
+      var firstparo = new Typed('#first-par', {
+        strings: [' '],
+        typeSpeed: 1,
+        showCursor: false,
+        
+      });
+    }
+    else
+    var firstpar = new Typed('#first-par', {
+      strings: [' ','Comitted to <br> Excellancy'],
+      typeSpeed: 15,
+      showCursor: false,
+      
+    });
+  });
+}, { threshold: 0.5 }); 
+
+const typingobserverx = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+   
+    if( !entry.isIntersecting ) {
+      var secondparo = new Typed('#second-par', {
+        strings: [' '],
+        typeSpeed: 1,
+        showCursor: false,
+        
+      });
+    }
+    else
+    var secondpar = new Typed('#second-par', {
+      strings: ['Lorem In <br> Excellancy'],
+      typeSpeed: 15,
+      showCursor: false,
+      
+    });
+  });
+}, { threshold: 0.5 }); 
+
+const typingobservery = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+   
+    if( !entry.isIntersecting ) {
+      var thirdparo = new Typed('#third-par', {
+        strings: [' '],
+        typeSpeed: 1,
+        showCursor: false,
+        
+      });
+    }
+    else
+    var thirdpar = new Typed('#third-par', {
+      strings: ['Flowing with <br> Excellancy'],
+      typeSpeed: 15,
+      showCursor: false,
+      
+    });
+  });
+}, { threshold: 0.5 }); 
 
 
- 
+
+const togglepar = $("#first-par"); 
+const togglepary = $("#second-par");
+const toggleparx = $("#third-par");
+
+typingobserver.observe(togglepar[0]);
+typingobserverx.observe(togglepary[0]);
+typingobservery.observe(toggleparx[0]);
 
 
 const itemobserver = new IntersectionObserver((entries) => {
@@ -279,55 +348,7 @@ itemobserver.observe(togglecounting[0]);
 
 
 
-
-  // function increment(initial, elem, finalVal, sign, speed,step) {
-  //   h5er = $('#' + elem);
-    
-  //   var currVal=number;
-
-  //   if (currVal<initial){
-  //     currVal = initial;
-  //     console.log(currVal)
-  //   }
-
-  //   else if (currVal => initial){
-    
-    
-    
-    
-  //   if (currVal < finalVal) {
-      
-      
-  //     currVal++;
-  //     number = currVal;
-  //     document.getElementById(elem).innerHTML = numberWithCommas(currVal)   ;
-      
-
-  //     setTimeout(function() {
-  //       increment(initial, elem, finalVal,sign,speed,step);
-  //     }, speed)
-
-  //     $("<sup>", {
-  //       text:  sign
-  //   }).appendTo(h5er);
-  // }
-  //   }};
-
-
-
-
-  const numberobserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        
-      //  increment(1,"gas-emissions", 3327, "MT", 1,1);
-      //  increment(1,"gas-emission", 127, "Gwh",100,1);
-      //  increment(1,"gas-em", 3321, "MT",1,1);
-      //  increment(1,"net", 1.5, "MT", 500, 0.01);
-
-      }
-    });
-  });
+  
 
 
   const reobserver = new IntersectionObserver(entries => {
@@ -442,7 +463,7 @@ nobserver.observe(carousel);
 nobserver.observe(upcomingevents);
 nobserver.observe(carouselcontroller)
 
-learnmore.forEach((el)=>nobserver.observe(el))
+learnmore.forEach((el)=>reobserver.observe(el))
 comiitedpar.forEach((el)=>nobserver.observe(el));
 gallery.forEach((el)=>nobserver.observe(el));
 navitems.forEach((el)=>nobserver.observe(el));
@@ -450,7 +471,7 @@ redline.forEach((el)=>nobserver.observe(el));
 eventers.forEach((el)=>nobserver.observe(el));
 achevislide.forEach((el)=>nobserver.observe(el));
 swiperslide.forEach((el)=>nobserver.observe(el));
-achevislide.forEach((el)=>numberobserver.observe(el));
+
 
 
 personaltoggle.addEventListener('click',function(){
