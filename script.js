@@ -221,7 +221,115 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".iftar-swiper-button-prev",
     },
   });
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
   
+function countUp(el, end, duration,sign) {
+  let start = 0;
+  let current = start;
+  const range = end - start;
+  const increment = range / duration;
+  let time = 0;
+  const timer = setInterval(function () {
+    time += 1; 
+    current += increment;
+    el.text(numberWithCommas(Math.round(current)));
+    $("<sup>", {
+            text:  sign
+        }).appendTo(el);
+    if (time >= duration) {
+      clearInterval(timer);
+      el.text(numberWithCommas(end));
+      $("<sup>", {
+        text:  sign
+    }).appendTo(el);
+    }
+  }, 1); 
+}
+
+
+
+
+ 
+
+
+const itemobserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !togglecounting.hasClass("animated")) {
+      countUp($("#gas-emissions"), 3271, 1000, "MT");
+      countUp($("#gas-em"),124, 1000,"Gwh");
+      countUp($("#gas-emission"), 3321, 1000,"MT");
+      countUp($("#net"), 1.25, 1000,"MT");
+      togglecounting.addClass("animated"); 
+    }
+  });
+}, { threshold: 0.5 }); 
+
+
+
+const togglecounting = $("#gas-emission"); 
+itemobserver.observe(togglecounting[0]);
+
+
+
+
+
+
+
+  // function increment(initial, elem, finalVal, sign, speed,step) {
+  //   h5er = $('#' + elem);
+    
+  //   var currVal=number;
+
+  //   if (currVal<initial){
+  //     currVal = initial;
+  //     console.log(currVal)
+  //   }
+
+  //   else if (currVal => initial){
+    
+    
+    
+    
+  //   if (currVal < finalVal) {
+      
+      
+  //     currVal++;
+  //     number = currVal;
+  //     document.getElementById(elem).innerHTML = numberWithCommas(currVal)   ;
+      
+
+  //     setTimeout(function() {
+  //       increment(initial, elem, finalVal,sign,speed,step);
+  //     }, speed)
+
+  //     $("<sup>", {
+  //       text:  sign
+  //   }).appendTo(h5er);
+  // }
+  //   }};
+
+
+
+
+  const numberobserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        
+      //  increment(1,"gas-emissions", 3327, "MT", 1,1);
+      //  increment(1,"gas-emission", 127, "Gwh",100,1);
+      //  increment(1,"gas-em", 3321, "MT",1,1);
+      //  increment(1,"net", 1.5, "MT", 500, 0.01);
+
+      }
+    });
+  });
+
+
   const reobserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -259,6 +367,8 @@ const srcollobserver = new IntersectionObserver(entries => {
     
   });
 });
+
+
 
 const arrowdown = document.querySelector('.arrow-down');
 
@@ -318,7 +428,11 @@ const footer = document.querySelector('.footer');
 
 const blackoverlay = document.querySelector(".black-overlay");
 
+
+
 srcollobserver.observe(carousel)
+
+nobserver.observe(menu)
 nobserver.observe(footer)
 nobserver.observe(gallerymedia)
 nobserver.observe(gallerytitle)
@@ -336,7 +450,7 @@ redline.forEach((el)=>nobserver.observe(el));
 eventers.forEach((el)=>nobserver.observe(el));
 achevislide.forEach((el)=>nobserver.observe(el));
 swiperslide.forEach((el)=>nobserver.observe(el));
-
+achevislide.forEach((el)=>numberobserver.observe(el));
 
 
 personaltoggle.addEventListener('click',function(){
