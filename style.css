@@ -1953,7 +1953,7 @@ filter: invert(11%) sepia(95%) saturate(5245%) hue-rotate(350deg) brightness(116
     filter: invert(66%) sepia(90%) saturate(959%) hue-rotate(1deg) brightness(103%) contrast(103%);
     }
 
-
+            
 
 .date{
     border: 1px solid #E6E6E6;
@@ -1977,8 +1977,8 @@ filter: invert(11%) sepia(95%) saturate(5245%) hue-rotate(350deg) brightness(116
 
 .gallery-large-container{
     border-top: 5px solid var(--cta-color);
-    
-    background-color: #006570;
+    background: linear-gradient(to right,#006570,#006570, #005E68,#003C43);
+    background-color: pink;       
     width: var(--large-width) !important;
     overflow-x: hidden;
     position: relative;
