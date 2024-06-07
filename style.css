@@ -1040,16 +1040,18 @@ a{
 
 .hamburger-icon{
     position: sticky;
-    height: 4rem;
-  width: 4rem;
-  top: 10%;
+    height: 2.5rem;
+  width: 2.5rem;
+  top: 0%;
   right: 10%;
   z-index: 1000;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 20%;
   transition: all 0.2s ease-in-out;
   background: rgba(255,255,255,0.5);
- 
+display: flex;
+justify-content: center;
+align-items: center;
   opacity: 1;
   transition: transform 1s 1.8s, opacity 1s 1.8s;
 }
@@ -1068,7 +1070,7 @@ a{
     position: absolute;
     left: 25%;
     top: 50%;
-    width: 32px;
+    width: 1.24rem;
     height: 3px;
     background-color: black;
     transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
@@ -2516,12 +2518,12 @@ color: #BAC4C5;
 }
 
 .btn:hover{
-    background-color: var(--dark-red) !important;
-    color: white !important;
+    background-color: #f8fc00 !important;
+
 }
 
 .btn:hover>a{
-    color: white !important;
+
 }
 
 
@@ -2813,6 +2815,13 @@ color: #BAC4C5;
 
 
 @media (max-width: 1200px) {
+  
+    .hero-nav.active .nav-container{
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        padding-right: 1rem !important;
+        padding-left: 2rem !important;
+    }
     .card-container{
         margin-left: calc(-.5* var(--bs-gutter-x)) !important;
     }
@@ -2825,7 +2834,7 @@ color: #BAC4C5;
         transform: translateX(-100px);
         z-index: 99;
         font-weight: 0;
-        font-size: 1.1rem;
+        
         transition: all 0.3s, opacity 0.3s 0.5s, transform 0.3s 0.5s;
     }
     
@@ -2960,7 +2969,7 @@ color: #BAC4C5;
         justify-content: center;
         text-align: center;
         align-items: center;
-        font-size: 2rem !important;
+        font-size: 1.3rem !important;
     }
 
     .dropdown-toggle{
