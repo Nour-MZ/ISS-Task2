@@ -415,7 +415,7 @@ const polltoggle = document.querySelector(".side-poll");
 const navlogo = document.querySelector('.nav-logo');
 
 const navitems = document.querySelectorAll(".nav-link");
-const redline = document.querySelectorAll(".event");
+const eleventss = document.querySelectorAll(".event-content");
 const eventers = document.querySelectorAll(".event")
 
 const comiitedpar = document.querySelectorAll('.comitted-par')
@@ -460,7 +460,7 @@ learnmore.forEach((el)=>reobserver.observe(el))
 comiitedpar.forEach((el)=>nobserver.observe(el));
 gallery.forEach((el)=>nobserver.observe(el));
 navitems.forEach((el)=>nobserver.observe(el));
-redline.forEach((el)=>nobserver.observe(el));
+eleventss.forEach((el)=>nobserver.observe(el));
 eventers.forEach((el)=>nobserver.observe(el));
 achevislide.forEach((el)=>nobserver.observe(el));
 swiperslide.forEach((el)=>nobserver.observe(el));

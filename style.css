@@ -1225,14 +1225,14 @@ align-items: center;
     width: 31.25rem;
     font-family: var(--font-main);
 
-    transform: translateX(50rem);
-    transition:  all 0.72s;
+    transform: translateX(40rem);
+    transition:  all 0.44s ease-out;
     position: relative;
 }
 
 .alert-paragraph.visible{
     z-index: 100000 !important;
-    transition:  all 0.41s;
+    transition:  all 0.4s ease-out;
     transform: translateX(0);
     background: rgba(255, 255, 255, 0.85); /* Black background with transparency */
     
@@ -1938,32 +1938,29 @@ padding: 0 !important;}
     justify-content: start;
     padding: 1.1rem;
     padding-left: 2.5rem;
-    opacity: 0;
-    transform: translateY(6.25rem);
+    opacity: 1;
+    
     
     transition: all 0.3s 1000ms;
     
 }
 
-.event.visible{
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.event:nth-child(2){
-    transition-delay: 500ms !important;
+
+.event:nth-child(2)>.container>.event-content{
+    transition-delay: 2000ms !important;
 }
-.event:nth-child(3){
-    transition-delay: 600ms !important;
+.event:nth-child(3)>.container>.event-content{
+    transition-delay: 2200ms !important;
 }
-.event:nth-child(4){
-    transition-delay: 700ms !important;
+.event:nth-child(4)>.container>.event-content{
+    transition-delay: 2400ms !important;
 }
-.event:nth-child(5){
-    transition-delay: 900ms !important;
+.event:nth-child(5)>.container>.event-content{
+    transition-delay: 2600ms !important;
 }
-.event:nth-child(6){
-    transition-delay: 900ms !important;
+.event:nth-child(6)>.container>.event-content{
+    transition-delay: 2800ms !important;
 }
 
 
@@ -2004,7 +2001,17 @@ padding: 0 !important;}
 
     display: flex;
     flex-direction: column;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s;
 }
+
+.event-content.visible{
+    opacity: 1;
+    transform: translate(0);
+
+}
+
 
 .event-content>.h2{
     font-size: 1.1rem !important;
@@ -2049,7 +2056,7 @@ filter: invert(11%) sepia(95%) saturate(5245%) hue-rotate(350deg) brightness(116
     padding-left: 2.5rem;
     background: linear-gradient(to bottom, white, #FAFAFA);
     opacity: 0;
-    transition: all 0.3s 800ms;
+    transition: all 0.3s 200ms;
     transform: translateY(6.25rem);
 }
 
