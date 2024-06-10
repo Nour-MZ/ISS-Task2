@@ -2667,12 +2667,19 @@ color: #BAC4C5;
     align-items: center;
     width: 50%;
     height: 100%;
+    
   }
   .close-modal{
     position: absolute;
     right: 3rem;
     background-color: transparent !important;
     
+}
+
+.iftar-swiper{
+    display: flex;
+
+    align-items: center;
 }
 
 .close-modal:hover{
@@ -2682,7 +2689,7 @@ color: #BAC4C5;
   .close-modal>img{
     height: 65%;
     width: 65%;
-    filter: brightness(0) invert(1); 
+    filter: invert(55%) sepia(16%) saturate(0%) hue-rotate(175deg) brightness(94%) contrast(86%);
   }
   .swipe-but{
     transition: all 0.3s;
@@ -2702,7 +2709,7 @@ color: #BAC4C5;
     border-radius: 3rem !important;
 }
 .iftar-swiper-button-next>img{
-   
+    
     height: 30%;
     width: 30%;
     z-index: 999;
