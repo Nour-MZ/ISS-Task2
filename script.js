@@ -205,23 +205,16 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".iftar-swiper-button-next",
       prevEl: ".iftar-swiper-button-prev",
     },
-    slidesPerView: 1
+    slidesPerView: 1,
+    initialSlide: 0,
+    observer: true,
+    runCallbacksOnInit: true
   });
 
-  var swiperdoctor = new Swiper(".doctor-swiper", {
-    navigation: {
-      nextEl: ".iftar-swiper-button-next",
-      prevEl: ".iftar-swiper-button-prev",
-    },
-  });
-  
-  var swiperdoctor = new Swiper(".suit-swiper", {
-    navigation: {
-      nextEl: ".iftar-swiper-button-next",
-      prevEl: ".iftar-swiper-button-prev",
-    },
-  });
+$(".close-modal").on("click",function(){
+  swiperiftar.slideTo(0, 100, 0)
 
+})
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }

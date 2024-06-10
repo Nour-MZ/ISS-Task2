@@ -2686,7 +2686,7 @@ color: #BAC4C5;
     transform: scale(1.3);
 }
 
-  .close-modal>img{
+  .close-modal>svg{
     height: 65%;
     width: 65%;
     filter: invert(55%) sepia(16%) saturate(0%) hue-rotate(175deg) brightness(94%) contrast(86%);
