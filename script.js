@@ -419,6 +419,7 @@ closealert = document.querySelector('.close-alert');
 const closequick = document.querySelector(".close-quick");
 const quicksection = document.querySelector(".quick-section")
 const quicktoggle = document.querySelector(".side-globe")
+const date = document.querySelector(".date");
 
 const closepoll = document.querySelector(".close-poll");
 const pollsection = document.querySelector(".poll-section");
@@ -427,7 +428,7 @@ const polltoggle = document.querySelector(".side-poll");
 const navlogo = document.querySelector('.nav-logo');
 
 const navitems = document.querySelectorAll(".nav-link");
-const redline = document.querySelectorAll(".red-line");
+const redline = document.querySelectorAll(".event");
 const eventers = document.querySelectorAll(".event")
 
 const comiitedpar = document.querySelectorAll('.comitted-par')
@@ -466,6 +467,7 @@ nobserver.observe(navlogo);
 nobserver.observe(carousel);
 nobserver.observe(upcomingevents);
 nobserver.observe(carouselcontroller)
+nobserver.observe(date);
 
 learnmore.forEach((el)=>reobserver.observe(el))
 comiitedpar.forEach((el)=>nobserver.observe(el));
