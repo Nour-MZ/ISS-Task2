@@ -327,9 +327,9 @@
                 <img src="Assets/x-sign.svg" class="img-fluid">
             </p>
         </div>
-        <div class="row mx-4 mx-lg-5 mt-lg-3 g-4">
+        <div class="row g-4 mx-4 mx-lg-5 mt-3">
             <div class="col-12 quick-title">Account Settings</div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon profile-icon">
                         <img src="Assets/profile.png" class="img-fluid">
@@ -339,7 +339,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon profile-icon">
                         <img src="Assets/profile.png" class="img-fluid">
@@ -349,7 +349,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon profile-icon">
                         <img src="Assets/profile.png" class="img-fluid">
@@ -359,7 +359,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon profile-icon">
                         <img src="Assets/profile.png" class="img-fluid">
@@ -370,9 +370,9 @@
                 </div>
             </div>
         </div>
-        <div class="row  mx-4 mx-lg-5 mt-lg-3 g-4">
+        <div class="row  mx-4 mx-lg-5 mt-lg-1 g-4 resource-row">
             <div class="col-12 quick-title mt-5">Resources</div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon resource-icon">
                         <img src="Assets/blue.png" class="img-fluid">
@@ -382,7 +382,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon resource-icon">
                         <img src="Assets/blue.png" class="img-fluid">
@@ -392,7 +392,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon resource-icon">
                         <img src="Assets/blue.png" class="img-fluid">
@@ -404,9 +404,9 @@
             </div>
         </div>
 
-        <div class="row mt-2 mx-4 mx-lg-5 mt-lg-3 g-4">
-            <div class="col-12 quick-title mt-2">Resources</div>
-            <div class="col-lg-5">
+        <div class="row mt-2 mx-4 mx-lg-5 mt-lg-4 ">
+            <div class="col-12 quick-title mt-2 mb-4">Resources</div>
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon privacy-icon">
                         <img src="Assets/shield.png" class="img-fluid">
@@ -416,7 +416,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon privacy-icon">
                         <img src="Assets/shield.png" class="img-fluid">
@@ -1134,16 +1134,25 @@
             <!--Iftra Modal-->
             <div class="modal fade" id="iftarModal" tabindex="-1">
                 <div class="modal-dialog modal-fullscreen z-3 ">
+                    <div class="blury"></div>
                   <div class="modal-content iftar-modal-content">
-                    <div class="modal-header bg-none">
+                    <div class="modal-header bg-none my-3">
                       <h5 class="modal-title" id="imageModalLabel">Iftar SlideShow</h5>
                       
-                        <div class="carousel-upcoming-button" data-bs-dismiss="modal">
-                            X
+                        <div class="carousel-upcoming-button close-modal" data-bs-dismiss="modal">
+                            <img src="Assets/x-sign.svg" alt="">
                         </div>
                      
                     </div>
                     <div class="iftar-modal-body modal-body">
+                        
+                        <div class="swiper-button-next swipe-but iftar-swiper-button-next carousel-upcoming-button z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev carousel-upcoming-button z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+
+                        </div>
                       <!-- Swiper -->
                       <div class="swiper iftar-swiper">
                         <div class="swiper-wrapper iftar-swiper-wrapper">
@@ -1164,18 +1173,9 @@
                           </div>
                         </div>
 
-                        <div class="swiper-button-next swipe-but iftar-swiper-button-next z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-                        </div>
-                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-
-                        </div>
                       </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal">Close</button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -1183,16 +1183,24 @@
               <!--Doctor Modal-->
               <div class="modal fade" id="doctorModal" tabindex="-1">
                 <div class="modal-dialog modal-fullscreen z-3 ">
+                    <div class="blury"></div>
                   <div class="modal-content iftar-modal-content">
-                    <div class="modal-header bg-none">
+                    <div class="modal-header bg-none my-3">
                       <h5 class="modal-title" id="imageModalLabel">Doctor SlideShow</h5>
                       
-                        <div class="carousel-upcoming-button" data-bs-dismiss="modal">
-                            X
+                        <div class="carousel-upcoming-button close-modal" data-bs-dismiss="modal">
+                            <img src="Assets/x-sign.svg" alt="">
                         </div>
                      
                     </div>
                     <div class="iftar-modal-body modal-body">
+                        <div class="swiper-button-next swipe-but iftar-swiper-button-next z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+
+                        </div>
                       <!-- Swiper -->
                       <div class="swiper doctor-swiper">
                         <div class="swiper-wrapper iftar-swiper-wrapper">
@@ -1213,18 +1221,10 @@
                           </div>
                         </div>
 
-                        <div class="swiper-button-next swipe-but iftar-swiper-button-next z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-                        </div>
-                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-
-                        </div>
+                        
                       </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal">Close</button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -1232,16 +1232,24 @@
               <!--SUit Modal-->
               <div class="modal fade" id="suitModal" tabindex="-1">
                 <div class="modal-dialog modal-fullscreen z-3 ">
+                    <div class="blury"></div>
                   <div class="modal-content iftar-modal-content">
-                    <div class="modal-header bg-none">
+                    <div class="modal-header bg-none my-3">
                       <h5 class="modal-title" id="imageModalLabel">Suit SlideShow</h5>
                       
-                        <div class="carousel-upcoming-button" data-bs-dismiss="modal">
-                            X
-                        </div>
-                     
+                      <div class="carousel-upcoming-button close-modal" data-bs-dismiss="modal">
+                        <img src="Assets/x-sign.svg" alt="">
+                    </div>
+                    
                     </div>
                     <div class="iftar-modal-body modal-body">
+                        <div class="swiper-button-next swipe-but iftar-swiper-button-next z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                        </div>
+                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev z-3">
+                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+    
+                        </div>
                       <!-- Swiper -->
                       <div class="swiper suit-swiper">
                         <div class="swiper-wrapper iftar-swiper-wrapper">
@@ -1262,18 +1270,10 @@
                           </div>
                         </div>
 
-                        <div class="swiper-button-next swipe-but iftar-swiper-button-next z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-                        </div>
-                        <div class="swiper-button-prev swipe-but iftar-swiper-button-prev z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
-
-                        </div>
+                       
                       </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal">Close</button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>

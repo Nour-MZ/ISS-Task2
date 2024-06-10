@@ -205,7 +205,7 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".iftar-swiper-button-next",
       prevEl: ".iftar-swiper-button-prev",
     },
-    slidesPerView: 1.1
+    slidesPerView: 1
   });
 
   var swiperdoctor = new Swiper(".doctor-swiper", {
