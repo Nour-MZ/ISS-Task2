@@ -184,8 +184,8 @@ var swiper = new Swiper(".mySwiper", {
             grid: {
                 rows: 1,
               },
-          slidesPerView: 2,
-          spaceBetween: 20,
+          slidesPerView: 1.4,
+          spaceBetween: 0,
           
         },
         // when window width is >= 640px
@@ -212,7 +212,7 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 $(".close-modal").on("click",function(){
-  swiperiftar.slideTo(0, 100, 0)
+  swiperiftar.slideTo(0, 800, 0)
 
 })
   function numberWithCommas(x) {

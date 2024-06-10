@@ -538,7 +538,7 @@ body.active-nav{
 
 
 .quick-links-container:hover{
-    background-color: #CE2B2C;
+    background-color: #c4c4c4;
 }
 
 .quick-links-container:hover a{
@@ -950,6 +950,15 @@ a{
 .hero-nav.active .search-logo{
     filter:none;
     margin-right: 6rem;
+    
+}
+
+.nav-logo{transition: none !important;}
+
+.hero-nav.active .nav-logo{
+    height: 6rem;
+    width: 6rem;
+    transition: none;
 }
 
 .nav-container{
@@ -1047,12 +1056,12 @@ a{
     height: 2.5rem;
   width: 2.5rem;
   top: 0%;
-  right: 10%;
+  right: 4%;
   z-index: 1000;
   cursor: pointer;
   border-radius: 20%;
   transition: all 0.2s ease-in-out;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.0);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -1076,7 +1085,7 @@ align-items: center;
     top: 50%;
     width: 1.24rem;
     height: 0.2rem;
-    background-color: black;
+    background-color: white;
     transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
 }
 
@@ -1094,9 +1103,11 @@ align-items: center;
 
   .icon-1.a {
     transform: rotate(40deg);
+    background-color: black !important;
   }
   .icon-3.b {
     transform: rotate(-40deg);
+    background-color: black !important;
   }
   .icon-2.c {
     opacity: 0;
@@ -2840,7 +2851,9 @@ color: #BAC4C5;
 
   @media (max-width: 800px) {
 
-    
+    .title>h1{
+        margin-left: 1.5rem !important;
+    }
     .gallery-swipe-right{
         background-color: #009BAC;
         right: 5% !important;
@@ -2874,6 +2887,14 @@ color: #BAC4C5;
     .nav-logo{
         height: 4rem;
         width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-nav.active .nav-logo{
+        height: 4rem !important;
+        width: 4rem !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2937,12 +2958,31 @@ color: #BAC4C5;
 
 
 @media (max-width: 1200px) {
-  
+    
+    .hero-nav.active .icon-1, .icon-2, .icon-3{
+        background-color: black;
+        
+    }
+
+    .hero-nav.active .icon-2{
+        background-color: black;
+    }
+
+    .hero-nav.active .icon-3{
+        background-color: black;
+    }
+
+    .hero-nav .icon-1, .icon-2, .icon-3{
+        background-color: white;
+    }
+
+
+    
     .hero-nav.active .nav-container{
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
         padding-right: 1rem !important;
-        padding-left: 2rem !important;
+        padding-left: 1rem !important;
     }
     .card-container{
         margin-left: calc(-.5* var(--bs-gutter-x)) !important;
