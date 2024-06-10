@@ -142,18 +142,12 @@ var swiper = new Swiper(".mySwiper", {
           grid: {
             rows: 1,
           },
-      slidesPerView: 1,
+      slidesPerView: 1.22,
       spaceBetween: 20,
-      slidesOffsetAfter: 50,
+      
         },
         // when window width is >= 480px
-        480: {
-            grid: {
-                rows: 1,
-              },
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
+        
         // when window width is >= 640px
         800: {
             grid: {

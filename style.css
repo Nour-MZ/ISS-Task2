@@ -198,6 +198,7 @@ body.active-nav{
 }
 
 
+
 .personal-section.active{
     opacity: 1;
     display: flex !important;
@@ -591,9 +592,8 @@ a{
    margin-left: 1.2rem;
 }
 
-.resource-row>.col:nth-child(4){
-    flex: 0 46%;
-}
+
+
 /* poll section */
 
 .poll-section{
@@ -2849,8 +2849,46 @@ color: #BAC4C5;
       }
   }
 
+  @media (max-width: 510px){
+    .quick-section .row>.col:last-of-type{
+        max-width: 100% !important;
+    }
+  }
+  @media (max-width: 650px) {
+    .personal-section{
+        width: 90% !important;
+      
+    }
+    .quick-section{
+        width: 93% !important;
+    }
+    
+    .poll-section{
+        width: 89% !important;
+    }
+    .quick-section .row>.col:last-of-type{
+        max-width: 45%;
+    }
+    
+    
+}
   @media (max-width: 800px) {
+   
+    .media-title{
+        margin-left: 1.5rem;
+    }
+    .media-image-title{
+        margin: 0;
+    }
+    .gallery-texto{
+        text-align: center;
+    }
+    .close-modal{
+        top: 2%;
+        right: 3%;
 
+    }
+    
     .title>h1{
         margin-left: 1.5rem !important;
     }
@@ -2878,11 +2916,19 @@ color: #BAC4C5;
         display: none;
     }
     
+    .gallery-swipe-left{
+        display: none;
+    }
+
+    .gallery-swipe-right{
+        display: none;
+    }
+
     .swiper-wrapper>.col{
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         width: 90%;
-      flex: 1 0 100%;
+        flex: 1 0 80%;
     }
     .nav-logo{
         height: 4rem;
@@ -2913,13 +2959,7 @@ color: #BAC4C5;
    
   }
 
-  .personal-section{
-    width: 80vw !important;
-    
-  }
-  .poll-section{
-    width: 80vw;
-}
+ 
 .poll-header{
     padding: 0.6rem;
     padding-left: 2rem;
@@ -2947,10 +2987,11 @@ color: #BAC4C5;
 .poll-percentage.active{
     transform: translate(0);
 }
-.quick-section{
-    width: 80vw !important;
-}
 
+
+.iftar-swiper{
+
+}
 
 
   
@@ -3081,7 +3122,7 @@ color: #BAC4C5;
         justify-content: center;
     }
     .learn-more-btn{
-       
+        font-size: 0.5rem;
         transform: translate(0);
     }
     .button-div>a{
@@ -3194,12 +3235,6 @@ color: #BAC4C5;
     .nav-menu-close {
         display: block;
     }
-    .personal-section{
-        width: 50vw;
-    }
-    .quick-section{
-        width: 60vw;
-    }
     
     
     .upcoming-fluid{
@@ -3296,6 +3331,14 @@ color: #BAC4C5;
         justify-content: space-between;
         align-items: flex-end;
     }
-
-    
+   
 }
+
+@media (min-width: 1245px){
+        .quick-section .row>.col:last-of-type{
+            max-width: 45%;
+        }
+        
+}
+
+
