@@ -206,7 +206,7 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 $(".close-modal").on("click",function(){
-  swiperiftar.slideTo(0, 800, 0)
+  swiperiftar.slideTo(0, 10000, 0)
 
 })
   function numberWithCommas(x) {
