@@ -189,7 +189,7 @@ body.active-nav{
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 42vw;
+    width: 32vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #F2F2F2;
@@ -304,7 +304,7 @@ body.active-nav{
 
 
 .carder{
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
     border: none !important;
     border-bottom: 0.1rem solid #EEEEEE !important;
@@ -384,8 +384,8 @@ body.active-nav{
     margin-top: -1rem;
     opacity: 0;
     z-index: -3;
-    transform: translateY(-6.20rem);
-    transition: all 0.5s;
+    transform: translateY(-4.20rem);
+    transition: all 0.5s ;
     height: 0;
    
     
@@ -489,7 +489,7 @@ body.active-nav{
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 42vw;
+    width: 35vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #F2F2F2;
@@ -520,6 +520,7 @@ body.active-nav{
 }
 
 .quick-links-container{
+
     display: flex;
     justify-content: flex-start;
     background-color: white;
@@ -574,7 +575,7 @@ body.active-nav{
 }
 .icon.resource-icon>img{
     height: 50%;
-    width: 55%;
+    width: 50%;
     
 }
 
@@ -588,7 +589,7 @@ a{
 }
 
 .profile-text{
-   font-size: 1rem;
+   font-size: 0.87rem;
    font-family: var(--font-second);
    margin-left: 1.2rem;
 }
@@ -606,7 +607,7 @@ a{
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 42vw;
+    width: 32vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #E1E1E1;

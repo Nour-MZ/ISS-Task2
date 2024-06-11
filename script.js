@@ -29,18 +29,31 @@ $(function() {
     $(this).toggleClass("active");
   })
   $(document).on('click', '.carder', function(e) {
-      
-      $(this).find(".arrow-down").toggleClass("active")
-      $(this).closest('.card-container').find('.personal-info').toggleClass("active"); // Toggle the class
-      
-      if ($(this).closest('.card-container').find('.personal-info').hasClass('active')){
-       
-        $(this).closest('.card-container').find('.personal-info').css('z-index', '3');
-      console.log("activated")
+      // $(".carder").each(function(){
+      //   $(this).find(".arrow-down").removeClass("active")
+      //   $(this).closest('.card-container').find('.personal-info').removeClass("active");
+      //   e.preventDefault();
+      // })
+
+      arrow = $(this).find(".arrow-down")
+      info = $(this).closest('.card-container').find('.personal-info');
+
+      arrow.toggleClass("active");
+      info.toggleClass("active"); // Toggle the class
+
+      if (info.hasClass('active')){
+       $(this).css('z-index', '11');
+        info.css('z-index', '10');
+        console.log("activated")
         
       }
       else{
-        $(this).closest('.card-container').find('.personal-info').css('z-index', '-1');
+      
+        info.css('z-index', '-3');
+        setTimeout(() => {  $(this).css('z-index', '3'); }, 200);
+        
+       
+
         console.log("deactivated")
       }
       e.preventDefault();
