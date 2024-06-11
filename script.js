@@ -24,8 +24,12 @@ $(function() {
   
 });
 
+  $(".carder").on("click", function(e){
+
+    $(this).toggleClass("active");
+  })
   $(document).on('click', '.carder', function(e) {
-   
+      
       $(this).find(".arrow-down").toggleClass("active")
       $(this).closest('.card-container').find('.personal-info').toggleClass("active"); // Toggle the class
       
@@ -120,7 +124,17 @@ $('.search-bar-personal').on('keyup', function() {
   });
 });
 
-
+const heroswiper = new Swiper('.hero-swiper', {
+  
+  navigation: {
+    nextEl: '.hero-swiper-right',
+    prevEl: '.hero-swiper-left',
+  },
+ 
+  effect: "fade",
+  loop:true
+ 
+});
 
 
 
@@ -193,22 +207,32 @@ var swiper = new Swiper(".mySwiper", {
       }
   });
 
-
-  var swiperiftar = new Swiper(".iftar-swiper", {
-    navigation: {
-      nextEl: ".iftar-swiper-button-next",
-      prevEl: ".iftar-swiper-button-prev",
-    },
-    slidesPerView: 1,
-    initialSlide: 0,
-    observer: true,
-    runCallbacksOnInit: true
+  
+   
+ 
+  
+  $(document).ready(function() {
+    var swiperiftar = new Swiper(".iftar-swiper", {
+      
+      navigation: {
+        nextEl: ".iftar-swiper-button-next",
+        prevEl: ".iftar-swiper-button-prev",
+      },
+      lazyPreloadPrevNext: 3,
+      slidesPerView: 1,
+      initialSlide: 0,
+      observer: true,
+      speed: 500,
+      
+      
+      runCallbacksOnInit: true
+    });
   });
 
-$(".close-modal").on("click",function(){
-  swiperiftar.slideTo(0, 10000, 0)
+  
+ 
 
-})
+
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -304,13 +328,13 @@ const typingobservery = new IntersectionObserver((entries) => {
 
 
 
-const togglepar = $("#first-par"); 
-const togglepary = $("#second-par");
-const toggleparx = $("#third-par");
+// const togglepar = $("#first-par"); 
+// const togglepary = $("#second-par");
+// const toggleparx = $("#third-par");
 
-typingobserver.observe(togglepar[0]);
-typingobserverx.observe(togglepary[0]);
-typingobservery.observe(toggleparx[0]);
+// typingobserver.observe(togglepar[0]);
+// typingobserverx.observe(togglepary[0]);
+// typingobservery.observe(toggleparx[0]);
 
 
 const itemobserver = new IntersectionObserver((entries) => {
@@ -347,14 +371,16 @@ itemobserver.observe(togglecounting[0]);
         entry.target.classList.remove('visible');
       }
     });
-  });
-  
+  },
+
+);
+
   const nobserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
-      
+     
     });
   });
 
@@ -418,7 +444,7 @@ const navitems = document.querySelectorAll(".nav-link");
 const eleventss = document.querySelectorAll(".event-content");
 const eventers = document.querySelectorAll(".event")
 
-const comiitedpar = document.querySelectorAll('.comitted-par')
+const comittedpar = document.querySelectorAll('.comitted-par')
 const learnmore = document.querySelectorAll('.learn-more-btn');
 const achevislide = document.querySelectorAll('.unique-swiper-slide');
 
@@ -439,12 +465,14 @@ const heronav = document.querySelector('.hero-nav');
 
 const blackoverlay = document.querySelector(".black-overlay");
 
+const galleryrightbut = document.querySelector(".gallery-swipe-right");
+const com = document.querySelector(".comitted-par");
 
 
 
 srcollobserver.observe(carousel)
 
-
+nobserver.observe(galleryrightbut)
 nobserver.observe(menu)
 nobserver.observe(footer)
 nobserver.observe(gallerymedia)
@@ -453,11 +481,11 @@ nobserver.observe(menuToggle)
 nobserver.observe(navlogo);
 nobserver.observe(carousel);
 nobserver.observe(upcomingevents);
-nobserver.observe(carouselcontroller)
+// nobserver.observe(carouselcontroller)
 nobserver.observe(date);
 
 learnmore.forEach((el)=>reobserver.observe(el))
-comiitedpar.forEach((el)=>nobserver.observe(el));
+// comittedpar.forEach((el)=>reobserver.observe(el));
 gallery.forEach((el)=>nobserver.observe(el));
 navitems.forEach((el)=>nobserver.observe(el));
 eleventss.forEach((el)=>nobserver.observe(el));
@@ -575,16 +603,16 @@ closequick.addEventListener('click',function(){
             })
 
 
-   
+   var alertdiv = document.querySelector(".alert-container");
         
         closealert.addEventListener('click', function(){
-          alertparagraph.classList.remove(`visible`);
+          alertdiv.classList.remove(`visible`);
           alerticon.classList.remove('visible');
       })
       
 
 alerticon.addEventListener('click', function(){
-    alertparagraph.classList.toggle(`visible`);
+    alertdiv.classList.toggle(`visible`);
     alerticon.classList.toggle('visible');
 })
 
