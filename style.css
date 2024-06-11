@@ -2068,19 +2068,19 @@ padding: 0 !important;}
 
 
 .event:nth-child(2)>.container>.event-content{
-    transition-delay: 2000ms !important;
+    transition-delay: 400ms !important;
 }
 .event:nth-child(3)>.container>.event-content{
-    transition-delay: 2200ms !important;
+    transition-delay: 600ms !important;
 }
 .event:nth-child(4)>.container>.event-content{
-    transition-delay: 2400ms !important;
+    transition-delay: 800ms !important;
 }
 .event:nth-child(5)>.container>.event-content{
-    transition-delay: 2600ms !important;
+    transition-delay: 900ms !important;
 }
 .event:nth-child(6)>.container>.event-content{
-    transition-delay: 2800ms !important;
+    transition-delay: 1000ms !important;
 }
 
 
