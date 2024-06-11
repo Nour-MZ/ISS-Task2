@@ -41,17 +41,15 @@ $(function() {
       arrow.toggleClass("active");
       info.toggleClass("active"); // Toggle the class
 
+    
       if (info.hasClass('active')){
-       $(this).css('z-index', '11');
-        info.css('z-index', '10');
+       
         console.log("activated")
         
       }
       else{
       
-        info.css('z-index', '-3');
-        setTimeout(() => {  $(this).css('z-index', '3'); }, 200);
-        
+       
        
 
         console.log("deactivated")
