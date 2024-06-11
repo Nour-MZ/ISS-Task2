@@ -207,28 +207,45 @@ var swiper = new Swiper(".mySwiper", {
       }
   });
 
-  
-   
- 
-  
-  $(document).ready(function() {
-    var swiperiftar = new Swiper(".iftar-swiper", {
+  $(".close-modal").on("click",function(){
+    swiperiftar.slideTo(0, 100000000, true);
+    
+  })
+
+
+    const swiperiftar = new Swiper(".iftar-swiper", {
       
       navigation: {
         nextEl: ".iftar-swiper-button-next",
         prevEl: ".iftar-swiper-button-prev",
       },
-      lazyPreloadPrevNext: 3,
+      on: {
+        afterInit: function () {
+          console.log("initiialized")
+          
+        $(".close-modal").on("click",function(){
+            swiperiftar.slideTo(0, 100000000, true);
+            
+          })
+      },
+      
+    },
+    
       slidesPerView: 1,
-      initialSlide: 0,
+      
       observer: true,
-      speed: 500,
-      
-      
       runCallbacksOnInit: true
+      
+     
     });
-  });
 
+
+  swiperiftar.slideTo(0, 100000000, true);
+  swiperiftar.on('update', function() {
+    console.log("after")
+    swiperiftar.slideTo(0, 0, true);
+   });
+      
   
  
 
