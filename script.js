@@ -1,4 +1,4 @@
-
+gsap.registerPlugin(ScrollTrigger) 
 
 
 $(document).ready(function() {
@@ -379,7 +379,7 @@ const itemobserver = new IntersectionObserver((entries) => {
 
 
 
-const togglecounting = $("#gas-emission"); 
+const togglecounting = $("#gas-emissions"); 
 itemobserver.observe(togglecounting[0]);
 
 
@@ -496,30 +496,301 @@ const blackoverlay = document.querySelector(".black-overlay");
 const galleryrightbut = document.querySelector(".gallery-swipe-right");
 const com = document.querySelector(".comitted-par");
 
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 800px)", () => {
+
+  var emissiontl = gsap.timeline({
+    scrollTrigger:{
+      trigger: '.emissioncontainer',
+      start: 'top 95%',
+    
+    }
+  })
+  
+  
+  emissiontl.from(".unique-swiper-slide",{
+      y:100,
+      x:0,
+      duration:0.5,
+      opacity:0,
+      delay:0.5,
+      stagger:0.3,
+      ease: "power3.out",
+      
+  })
+  
+  
+  emissiontl.fromTo(".emission-next-but",{
+      opacity:0,
+  },{ opacity:1, duration: 0.2 },">0.5")
+  
+
+  //upcoming
+  var upcomingtl = gsap.timeline({
+    scrollTrigger:{
+      trigger: '.upcoming-fluid',
+      start: 'top 80%',
+      
+    }
+  })
+  
+  upcomingtl.to(".carousel-whole-container",{
+        y:0,
+        duration:0.4,
+        opacity:1,
+        delay: 0.5,
+        ease: "power3.out"
+  })
+
+  upcomingtl.to(".upcoming-events",{
+    y:0,
+    opacity:1,
+    
+  },">0.05")
+
+  upcomingtl.to(".event-content",{
+      
+      y:0,
+      opacity:1,
+      stagger:0.2
+  },">0.3")
+
+  ///link gallery
+  var linkstl = gsap.timeline({
+    scrollTrigger:{
+      trigger: '.galleryswiper',
+      start: 'top bottom',
+      
+    }
+  });
+  
+  linkstl.to(".link-swiper",
+    { 
+      y:0,
+      delay:1,
+      opacity: 1,
+      stagger:0.2,
+      ease: "power2.out",
+    })
+  
+    linkstl.to(".swiper-button-next.carousel-upcoming-button.gallery-swipe-right",{
+      autoAlpha: 1,
+    },
+    ">0.5"
+    )
+  
+//media gallery animation
+
+var mgallerytl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '.title-row',
+    start: 'top bottom',
+    
+  }
+})
+
+mgallerytl.to(".media-title",{
+  y:0,
+  opacity:1,
+
+})
+
+mgallerytl.fromTo(".title-row",{
+  y:100,
+  opacity:0,
+
+},{y:0,
+  opacity:1,})
 
 
-srcollobserver.observe(carousel)
+mgallerytl.fromTo(".gallery-items",{
+  y:100,
+  opacity:0,
+
+},{y:0,
+  opacity:1,
+  stagger:0.3,
+duration:0.3},">0.1")
+
+
+
+});
+//^ For large screen animations
+
+
+mm.add("(max-width: 800px)", () => {
+//emission container swiper
+var emissiontl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '.emissioncontainer',
+    start: 'top 95%',
+  
+  }
+})
+
+
+emissiontl.from(".unique-swiper-slide",{
+    y:100,
+    x:0,
+    duration:0.5,
+    opacity:0,
+    delay:0.5,
+    stagger:0.3,
+    ease: "power3.out",
+    
+})
+
+
+emissiontl.fromTo(".emission-next-but",{
+    opacity:0,
+},{ opacity:1, duration: 0.2 },">0.5")
+
+//upcoming event anmation
+gsap.to(".carousel-whole-container",{
+  y:0,
+  duration:0.5,
+  opacity:1,
+  delay: 0.5,
+  ease: "power3.out",
+  scrollTrigger:{
+    trigger: '.upcoming-fluid',
+    start: 'top 90%',
+    
+  }
+})
+
+
+var upcomingtl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '.upcoming-events',
+    start: 'top 80%',
+    
+  }
+})
+
+
+upcomingtl.to(".upcoming-events",{
+    y:0,
+    opacity:1,
+  
+},">-0.2")
+
+upcomingtl.to(".event-content",{
+    
+    y:0,
+    opacity:1,
+    stagger:0.2
+},">0.3")
+
+
+
+//link gallery animation
+
+var linkstl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '.galleryswiper',
+    start: 'top bottom',
+    
+  }
+});
+
+linkstl.to(".link-swiper",
+  { 
+    y:0,
+    delay:1,
+    opacity: 1,
+    stagger:0.2,
+    ease: "power2.out",
+  })
+
+  linkstl.to(".swiper-button-next.carousel-upcoming-button.gallery-swipe-right",{
+    autoAlpha: 1,
+  },
+  ">0.5"
+  )
+
+//media gallery animation
+
+var mgallerytl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '.title-row',
+    start: 'top bottom',
+    
+  }
+})
+
+mgallerytl.to(".media-title",{
+  y:0,
+  opacity:1,
+
+})
+
+mgallerytl.fromTo(".title-row",{
+  y:100,
+  opacity:0,
+},
+{y:0,
+opacity:1,})
+
+
+gsap.fromTo(".gallery-items",{
+  
+  y:100,
+  opacity:0,
+  stagger:0.9,
+  
+},{
+  scrollTrigger:{
+    trigger: '.gallery-items',
+    start: 'top bottom',
+    
+  },
+  delay:1,
+  y:0,
+  opacity:1,
+  stagger:0.75,
+})
+
+
+
+})
+
+
+
+// mgallerytl.fromTo(".gallery-items",{
+//   y:100,
+//   opacity:0,
+
+// },{y:0,
+//   opacity:1,
+//   stagger:0.3,
+// duration:0.3},">0.1")
+
+// srcollobserver.observe(carousel)
 
 nobserver.observe(galleryrightbut)
 nobserver.observe(menu)
 nobserver.observe(footer)
-nobserver.observe(gallerymedia)
+// nobserver.observe(gallerymedia)
 nobserver.observe(gallerytitle)
 nobserver.observe(menuToggle)
 nobserver.observe(navlogo);
 nobserver.observe(carousel);
-nobserver.observe(upcomingevents);
+// nobserver.observe(upcomingevents);
 // nobserver.observe(carouselcontroller)
 nobserver.observe(date);
 
+
+
 learnmore.forEach((el)=>reobserver.observe(el))
 // comittedpar.forEach((el)=>reobserver.observe(el));
-gallery.forEach((el)=>nobserver.observe(el));
+// gallery.forEach((el)=>nobserver.observe(el));
 navitems.forEach((el)=>nobserver.observe(el));
-eleventss.forEach((el)=>nobserver.observe(el));
+// eleventss.forEach((el)=>nobserver.observe(el));
 eventers.forEach((el)=>nobserver.observe(el));
-achevislide.forEach((el)=>nobserver.observe(el));
-swiperslide.forEach((el)=>nobserver.observe(el));
+// achevislide.forEach((el)=>nobserver.observe(el));
+// swiperslide.forEach((el)=>nobserver.observe(el));
 
 
 blackoverlay.addEventListener('click',function(){
