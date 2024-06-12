@@ -141,7 +141,7 @@ const heroswiper = new Swiper('.hero-swiper', {
     nextEl: '.hero-swiper-right',
     prevEl: '.hero-swiper-left',
   },
- 
+ speed:700,
   effect: "fade",
   loop:true
  
@@ -217,6 +217,11 @@ var swiper = new Swiper(".mySwiper", {
         }
       }
   });
+  
+  // $(window).on('load', function() {
+  //   $('#iftarModal').modal('show');
+  //   $('#iftarModal').modal('hide');
+  // });
 
   $(".close-modal").on("click",function(){
     swiperiftar.slideTo(0, 100000000, true);
@@ -232,7 +237,9 @@ var swiper = new Swiper(".mySwiper", {
       },
       on: {
         afterInit: function () {
-          console.log("initiialized")
+          console.log("initiialized");
+          
+          $(".swiper-button-prev").css("opacity", "0");
           
         $(".close-modal").on("click",function(){
             swiperiftar.slideTo(0, 100000000, true);
@@ -249,9 +256,11 @@ var swiper = new Swiper(".mySwiper", {
       
      
     });
-
+    
+    console.log(swiperiftar.update())
 
   swiperiftar.slideTo(0, 100000000, true);
+
   swiperiftar.on('update', function() {
     console.log("after")
     swiperiftar.slideTo(0, 0, true);
@@ -560,7 +569,9 @@ mm.add("(min-width: 800px)", () => {
   var linkstl = gsap.timeline({
     scrollTrigger:{
       trigger: '.galleryswiper',
+  
       start: 'top bottom',
+ 
       
     }
   });
@@ -584,6 +595,7 @@ mm.add("(min-width: 800px)", () => {
 
 var mgallerytl = gsap.timeline({
   scrollTrigger:{
+    
     trigger: '.title-row',
     start: 'top bottom',
     
@@ -607,7 +619,6 @@ mgallerytl.fromTo(".title-row",{
 mgallerytl.fromTo(".gallery-items",{
   y:100,
   opacity:0,
-
 },{y:0,
   opacity:1,
   stagger:0.3,
@@ -756,7 +767,7 @@ gsap.fromTo(".gallery-items",{
 
 })
 
-
+gsap.fromTo(".iftar-swiper-button-prev",{ opacity:0},{opacity:0})
 
 // mgallerytl.fromTo(".gallery-items",{
 //   y:100,
