@@ -449,7 +449,7 @@ const personalinfo = document.querySelector('.personal-info');
 
 const personaltoggle = document.querySelector(".side-personal");
 const personalsection = document.querySelector('.personal-section');
-const personalx = document.querySelector('.close-personal');
+const personalx = document.querySelector('#close-personal');
 const menu = document.getElementById('nav-menu');
 const menuToggle = document.getElementById('nav-menu-toggle');
 const menuClose = document.getElementById('nav-menu-close');
@@ -466,7 +466,7 @@ alerticon = document.querySelector('.alert-icon-div');
 alertparagraph = document.querySelector('.alert-paragraph');
 closealert = document.querySelector('.close-alert');
 
-const closequick = document.querySelector(".close-quick");
+const closequick = document.querySelector("#close-quick");
 const quicksection = document.querySelector(".quick-section")
 const quicktoggle = document.querySelector(".side-globe")
 const date = document.querySelector(".date");
