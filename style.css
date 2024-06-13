@@ -7,7 +7,7 @@
 }
 
 body{
-   
+
 
 }
 
@@ -94,6 +94,55 @@ body.active-nav{
     overflow: hidden;
 }
 
+
+.preloader {
+    
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    
+  }
+  
+  .prl-logo {
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.3rem;
+    
+  }
+  
+  .lightCyan-slider,
+  .persianGreen-slider,
+  .white-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  .lightCyan-slider {
+    background: var(--dark-red);
+  }
+  
+  .persianGreen-slider {
+    background: var(--dark-red);
+  }
+  
+  .white-slider {
+    background: #fff;
+  }
+  
+  .hiderne {
+    opacity: 0;
+    color: #03a6a6 !;
+    font-weight: lighter;
+  }
 
 
 
@@ -242,7 +291,7 @@ body.active-nav{
 }
 .close-personal{
     cursor: pointer;
-    transition: all 0.3s;
+   
     display: flex;
  
     justify-content: flex-end;
@@ -260,11 +309,12 @@ body.active-nav{
     filter: invert(55%) sepia(16%) saturate(0%) hue-rotate(175deg) brightness(94%) contrast(86%);
     width: 2rem;
     height: 2rem;
+    transition: transform 0.3s;
 
 }
 
 
-.close-personal:hover{
+.close-personal:hover>img{
     transform: scale(1.2);
     
 }

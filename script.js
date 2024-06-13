@@ -505,6 +505,53 @@ const blackoverlay = document.querySelector(".black-overlay");
 const galleryrightbut = document.querySelector(".gallery-swipe-right");
 const com = document.querySelector(".comitted-par");
 
+gsap.to(".img-swiper",{
+
+    scale:1.2,
+    scrollTrigger:{
+      trigger: ".emissioncontainer",
+      start: "top 95%",
+      scrub:1.5,
+    }
+}
+
+)
+
+// const pretl = gsap.timeline(
+//   { defaults: { ease: "power1.out", duration: 1 },
+//    },
+ 
+// );
+
+// pretl.to(".lightCyan-slider", {
+//   x: " 100%",
+//   duration: 0.8
+// });
+
+// pretl.to(
+//   ".white-slider",
+//   {
+//     x: "0",
+    
+//   },
+//   "-=1"
+// );
+
+// pretl.to(".hiderne", {
+//   opacity: 1,
+//   x: "0%",
+//   duration: 3,
+  
+// });
+
+// pretl.to(".preloader", {
+//   x: "200%",
+//   duration: 0.2,
+//   onComplete: function() {
+//     $(body).removeClass('active-nav'); // then only replace with blue div with new height and width
+//   }
+// });
+
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 800px)", () => {
