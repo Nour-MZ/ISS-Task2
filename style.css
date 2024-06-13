@@ -245,7 +245,7 @@ body.active-nav{
     transition: all 0.3s;
     display: flex;
  
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 1rem !important;
 }
@@ -693,12 +693,12 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    /* background-color: white;
     height: 10%;
     padding: 3rem; 
     padding-top: 1.2rem;
     padding-bottom: 1rem;
-    padding-right: 1rem;
+    padding-right: 1rem; */
     
 }
 
@@ -1380,10 +1380,13 @@ align-items: center;
     height: auto;
     max-height: 100vh;
     width: 100%;
+    
     position: relative;
 }
 
 .hero-swiper-wrapper{
+    background-color: rgb(255, 255, 255) ;
+    width: 100%;
     max-height: inherit !important;
     position: relative;
 }
@@ -2995,12 +2998,24 @@ color: #BAC4C5;
     transition: none !important;
 
 }
+.iftar-swiper-button-next.swiper-button-disabled{
+    opacity: 0;
+    visibility: 0;
+   
+
+}
 .swiper-button-next:not(.swiper-button-disabled){
     opacity: 1 !important;
     transition: all 0.3s !important;
 }
 .swiper-button-prev:not(.swiper-button-disabled){
     opacity: 1 !important;
+    transition: all 0.3s !important;
+}
+
+
+.swiper-button-prev:not(.swiper-button-disabled){
+    opacity: 1 ;
     transition: all 0.3s !important;
 }
 
@@ -3099,7 +3114,9 @@ color: #BAC4C5;
   }
 
   .swiper-button-next-disabled{
+    visibility: hidden;
     opacity: 0;
+    transition: 0.2s ease-in-out;
   }
 
  .swiper-button-next.carousel-upcoming-button.gallery-swipe-right.swiper-button-disabled{
@@ -3107,12 +3124,7 @@ color: #BAC4C5;
         opacity: 0 !important;
         transition: 0.2s ease-in-out !important;
  }
-  .swiper-button-disabled {
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.2s ease-in-out;
-  }
-
+ 
   
   .btn:hover{
     opacity: 1 !important;
@@ -3198,7 +3210,7 @@ color: #BAC4C5;
     }
 
     .comitted-par{
-        margin-bottom: 3rem !important;
+        margin-bottom: 1rem !important;
         letter-spacing: 0.3rem !important;
         word-spacing: 0 !important;
     }
@@ -3298,8 +3310,7 @@ color: #BAC4C5;
 
  
 .poll-header{
-    padding: 0.6rem;
-    padding-left: 2rem;
+    
 }
 
 .poll-text{
@@ -3580,6 +3591,7 @@ color: #BAC4C5;
         padding-left: 1rem;
         padding-right: 1rem;
         bottom: 0.3rem;
+        width: 6rem;
     }
     .button-div>a{
         height: 100%;
