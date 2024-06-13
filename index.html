@@ -9,6 +9,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -17,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/54c924fc60.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="/Assets/logo-colored.ico">
-    <link rel="stylesheet" href="style.css">
+    
     
 </head>
 <body>
@@ -54,18 +55,21 @@
     </nav>
 
     <div class="personal-section overflow-y-auto overflow-x-hidden">
-        <div class="p-section-head ">
-            <h3>GROUP DIRECTORY SEARCH</h3>
-            <div class="close-personal">
-                <img src="Assets/x-sign.svg" class="img-fluid">
+        <div class="container q-section-head ">
+            <div class="row">
+                <h3 class="col-10 q-links-title p-section-title">GROUP DIRECTORY SEACH</h3>
+                <div class="close-personal close-quick col-2">
+                    <img src="Assets/x-sign.svg" class="img-fluid">
+                </div>
             </div>
         </div>
+        
 
-        <div class="mx-3">
+        <div class="poll-padder">
 
 
-            <div class="row d-flex justify-content-around  p-2">
-                <div class="col-11 ">
+            <div class="row d-flex justify-content-around">
+                <div class="col ">
                     <div class="input-group search-group-personal ">
                         <span class="input-group-text" id="basic-addon1">
                             <img src="Assets/search.svg" class=" imager img-fluid">
@@ -75,8 +79,8 @@
                 </div>
 
                 <div class="row card-container">
-                <div class="col-11">
-                    <div class="card carder" >
+                <div class="col-12">
+                    <div class="container card carder" >
                         <div class="row g-0 mx-4">
                           <div class="col-md-4 personal-card">
                             <img src="Assets/salim.png" class="img-fluid rounded-start" alt="...">
@@ -100,7 +104,7 @@
 
                     </div>
                 </div>
-                <div class="col-11 personal-info hide border-bottom-0">
+                <div class="col-12 personal-info hide border-bottom-0">
                     <div class="card personal-back border-top-0" >
                             <div class="marker-div-personal">
                                 <img src="Assets/markero.png" class="img-fluid">
@@ -136,7 +140,7 @@
             </div> <!--row closer-->
 
             <div class="row card-container">
-                <div class="col-11">
+                <div class="col-12">
                     <div class="card carder" >
                         <div class="row g-0 mx-4">
                           <div class="col-md-4 personal-card">
@@ -161,7 +165,7 @@
 
                     </div>
                 </div>
-                <div class="col-11 personal-info border-bottom-0">
+                <div class="col-12 personal-info border-bottom-0">
                     <div class="card personal-back border-top-0" >
                             <div class="marker-div-personal">
                                 <img src="Assets/markero.png" class="img-fluid">
@@ -197,7 +201,7 @@
             </div>
 
             <div class="row card-container">
-                <div class="col-11">
+                <div class="col-12">
                     <div class="card carder" >
                         <div class="row g-0 mx-4">
                           <div class="col-md-4 personal-card">
@@ -222,7 +226,7 @@
 
                     </div>
                 </div>
-                <div class="col-11 personal-info border-bottom-0">
+                <div class="col-12 personal-info border-bottom-0">
                     <div class="card personal-back border-top-0" >
                             <div class="marker-div-personal">
                                 <img src="Assets/markero.png" class="img-fluid">
@@ -257,7 +261,7 @@
                 </div>
             </div>
             <div class="row card-container">
-                <div class="col-11">
+                <div class="col-12">
                     <div class="card carder" >
                         <div class="row g-0 mx-4">
                           <div class="col-md-4 personal-card">
@@ -282,7 +286,7 @@
 
                     </div>
                 </div>
-                <div class="col-11 personal-info border-bottom-0">
+                <div class="col-12 personal-info border-bottom-0">
                     <div class="card personal-back border-top-0" >
                             <div class="marker-div-personal">
                                 <img src="Assets/markero.png" class="img-fluid">
@@ -324,58 +328,60 @@
     </div>
 
     <div class="quick-section overflow-y-auto overflow-x-hidden">
-        <div class="row q-section-head ">
-            <h3 class="col-7 me-lg-1">QUICK LINKS</h3>
-            <p class="close-personal close-quick col-1">
-                <img src="Assets/x-sign.svg" class="img-fluid">
-            </p>
-        </div>
-        <div class="container">
-        <div class="row g-4 mx-4 mx-lg-5 mt-3 ">
-            <div class="col-12 quick-title">Account Settings</div>
-            <div class="col">
-                <div class=" quick-links-container px-4 py-2">
-                    <div class="icon profile-icon">
-                        <img src="Assets/profile.png" class="img-fluid">
-                    </div>
-                    <div class="profile-text">
-                        <a href="#">Profile Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class=" quick-links-container px-4 py-2">
-                    <div class="icon profile-icon">
-                        <img src="Assets/profile.png" class="img-fluid">
-                    </div>
-                    <div class="profile-text">
-                        <a href="#">Profile Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class=" quick-links-container px-4 py-2">
-                    <div class="icon profile-icon">
-                        <img src="Assets/profile.png" class="img-fluid">
-                    </div>
-                    <div class="profile-text">
-                        <a href="#">Profile Information</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class=" quick-links-container px-4 py-2">
-                    <div class="icon profile-icon">
-                        <img src="Assets/profile.png" class="img-fluid">
-                    </div>
-                    <div class="profile-text">
-                        <a href="#">Profile Information</a>
-                    </div>
+        <div class="container q-section-head ">
+            <div class="row">
+                <h3 class="col-9 q-links-title">QUICK LINKS</h3>
+                <div class="close-personal close-quick col-3">
+                    <img src="Assets/x-sign.svg" class="img-fluid">
                 </div>
             </div>
         </div>
-        <div class="row  mx-4 mx-lg-5 mt-lg-1 g-4 resource-row">
-            <div class="col-12 quick-title mt-5">Resources</div>
+        <div class="poll-padder">
+        <div class="row row-cols-1 row-cols-xl-2 g-3 mt-3 ">
+            <div class="col-xl-12 quick-title">Account Settings</div>
+            <div class="col">
+                <div class=" quick-links-container px-4 py-2">
+                    <div class="icon profile-icon">
+                        <img src="Assets/profile.png" class="img-fluid">
+                    </div>
+                    <div class="profile-text">
+                        <a href="#">Profile Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" quick-links-container px-4 py-2">
+                    <div class="icon profile-icon">
+                        <img src="Assets/profile.png" class="img-fluid">
+                    </div>
+                    <div class="profile-text">
+                        <a href="#">Profile Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" quick-links-container px-4 py-2">
+                    <div class="icon profile-icon">
+                        <img src="Assets/profile.png" class="img-fluid">
+                    </div>
+                    <div class="profile-text">
+                        <a href="#">Profile Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class=" quick-links-container px-4 py-2">
+                    <div class="icon profile-icon">
+                        <img src="Assets/profile.png" class="img-fluid">
+                    </div>
+                    <div class="profile-text">
+                        <a href="#">Profile Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-xl-2  g-3 mt-3  resource-row">
+            <div class="col-xl-12 quick-title ">Resources</div>
             <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon resource-icon">
@@ -408,8 +414,8 @@
             </div>
         </div>
 
-        <div class="row mt-2 mx-4 mx-lg-5 mt-lg-4 gy-3 ">
-            <div class="col-12 quick-title mt-2 mb-4">Resources</div>
+        <div class="row row-cols-1 row-cols-xl-2  g-3 mt-3  ">
+            <div class="col-xl-12 quick-title mt-2">Resources</div>
             <div class="col">
                 <div class=" quick-links-container px-4 py-2">
                     <div class="icon privacy-icon">
@@ -433,7 +439,7 @@
         </div>
     </div>                       
               
-    </div>
+    </div> <!--quick section closer-->
     <div class="poll-section overflow-y-auto overflow-x-hidden">
         <div class="poll-header">
             <h3>POLLS</h3>
@@ -441,41 +447,44 @@
                 <img src="Assets/x-sign.svg" class="img-fluid" alt="">
             </div>
         </div>
-       
-        <div class="row poll-body ">
-            <div class="col-12 poll-text">
+    <div class="poll-padder">
+       <div class="container poll-container">
+        <div class="row poll-body row-cols-1">
+            <div class="col poll-text">
                 Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia atque nulla quisquam delectus sequi in dolorem vero quae praesentium quos!
             </div>
-            <div class="col-10 poll-answer">
+            <div class="col poll-answer">
                 <div class="poll-background"> </div>
                 <a href="" class="poll-answer-text">Strongly Agree</a> 
                 <div class="poll-percentage">30%</div>
             </div>
-            <div class="col-10 poll-answer">
+            <div class="col poll-answer">
                 <div class="poll-background"></div>
                 <a href="" class="poll-answer-text">Strongly Agree</a> 
                  <div class="poll-percentage">40%</div>
             </div>
-            <div class="col-10 poll-answer">
+            <div class="col poll-answer">
                 <div class="poll-background"></div>
                 <a href="" class="poll-answer-text">Strongly Agree</a> 
                  <div class="poll-percentage">20%</div>
             </div>
-            <div class="col-10 poll-answer">
+            <div class="col poll-answer">
                 <div class="poll-background"></div>
                 <a href="" class="poll-answer-text">Strongly Agree</a>  
                 <div class="poll-percentage">10%</div>
             </div>
-            <div class="col-10 poll-answer">
+            <div class="col poll-answer">
                 <div class="poll-background"></div>
                 <a href="" class="poll-answer-text">Strongly Agree</a> 
                  <div class="poll-percentage">0%</div>
             </div>
-            <div class="col-11 view-previous">
+            <div class="col view-previous">
                 <a href="">VIEW PREVIOUS POLLS<i class="fa-solid fa-chevron-right arrow-right-poll"></i></a>
                 
             </div>
         </div>
+      </div>
+    </div>
     </div>
  
     <div class="main-container">
@@ -504,7 +513,7 @@
 
                 
 
-                <div class="hero-nav  w-100 mt-5 p-0 ">
+                <div class="hero-nav  w-100 mt-5">
                     <div class="nav-container container">
                         <div class="nav-logo navbar-brand" href="#">
                             <img src="assets/logo.png" alt="Logo" class="white-logo img-fluid">
@@ -819,7 +828,7 @@
                                     </div>
                                 </div>
                                 <div class="event">
-                                    <div class="container d-flex justify-content-start align-items-center ps-5">
+                                    <div class="container d-flex justify-content-start align-items-center ">
                                         <div class="red-line yellow "></div>
                                         <div class="event-content">
                                             <div class="h2"> Eid-al-adha</div>
@@ -836,7 +845,7 @@
                                     <h2>February</h2>
                                 </div>
                                 <div class="event">
-                                    <div class="container d-flex justify-content-start align-items-center ps-5">
+                                    <div class="container d-flex justify-content-start align-items-center ">
                                         <div class="red-line"></div>
                                         <div class="event-content">
                                             <div class="h2"> asdl</div>
@@ -850,7 +859,7 @@
                                     </div>
                                 </div>
                                 <div class="event">
-                                    <div class="container d-flex justify-content-start align-items-center ps-5">
+                                    <div class="container d-flex justify-content-start align-items-center ">
                                         <div class="red-line "></div>
                                         <div class="event-content">
                                             <div class="h2"> Visit</div>

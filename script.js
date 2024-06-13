@@ -89,14 +89,14 @@ $(window).scroll(function() {
     $('.hero-nav').removeClass('active');
     $('.hero-nav').css('transform', 'none');
   }
-  if ($(window).scrollTop() > 70 && $(window).scrollTop() <120 ) {
+  if ($(window).scrollTop() > 61 && $(window).scrollTop() <120 ) {
     $(".white-logo").css('display',"none")
     $(".colored-logo").css('display',"block")
     $('.hero-nav').css('opacity', 0);
     $('.hero-nav').css('transform', 'translateY(-50px)');
     $('.hero-nav').removeClass('active');} 
     
-  else if($(window).scrollTop() > 130){
+  else if($(window).scrollTop() >122){
     $(".white-logo").css('display',"none")
     $(".colored-logo").css('display',"block")
     $('.hero-nav').addClass('active'); 
@@ -179,7 +179,7 @@ var swiper = new Swiper(".mySwiper", {
                 rows: 2,
               },
           slidesPerView: 4,
-          spaceBetween: 35,
+          spaceBetween: 20,
           
         }
       }
