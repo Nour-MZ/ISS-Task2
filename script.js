@@ -517,6 +517,43 @@ gsap.to(".img-swiper",{
 
 )
 
+gsap.to(".markersecond-div",{
+
+  rotate: 20,
+  scrollTrigger:{
+    trigger: ".gallery-large-container",
+    start: "top 95%",
+    scrub:1,
+  }
+}
+
+)
+
+gsap.to(".marker-div-third",{
+
+  rotate: 10,
+  scrollTrigger:{
+    trigger: ".gallery-large-container",
+    start: "top 95%",
+    scrub:1,
+  }
+}
+
+)
+
+gsap.to(".marker-div",{
+
+  rotate: 20,
+  scrollTrigger:{
+    trigger: ".gallery-large-container",
+    start: "top 95%",
+    scrub:1,
+  }
+}
+
+)
+
+
 // const pretl = gsap.timeline(
 //   { defaults: { ease: "power1.out", duration: 1 },
 //    },

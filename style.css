@@ -2352,6 +2352,7 @@ filter: invert(11%) sepia(95%) saturate(5245%) hue-rotate(350deg) brightness(116
     background-color: pink;       
     width: var(--large-width) !important;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
 }
 
