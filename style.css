@@ -1430,7 +1430,7 @@ align-items: center;
     font-family: var(--font-book);
     font-size: 3.5rem;
     
-    transition: all 0.5s 0.2s;
+    transition: all 0.5s 0.6s;
     transform: translateY(10rem);
     opacity: 0;
     margin-bottom: 1rem !important;
@@ -1464,7 +1464,7 @@ align-items: center;
 
     
     transform: translateY(11rem);
-    transition: all 0.5s, opacity 0.5s 0.3s, transform 0.5s 0.2s   !important;
+    transition: all 0.4s, opacity 0.4s 0.6s, transform 0.4s 0.6s   !important;
     opacity: 0;
     background-color: var(--cta-color) ; 
     font-family: var(--font-book);
@@ -1759,7 +1759,7 @@ align-items: center;
         font-size: 2rem;
         line-height: 1 !important;
         margin-bottom: 0 !important;
-        
+        font-family: var(--font-main) 
     }
   
     .inner-carousel-number.dark-red{
