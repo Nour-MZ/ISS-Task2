@@ -1374,7 +1374,10 @@ align-items: center;
 
 
 
-
+.swiper-button-next.swiper-button-disabled{
+    opacity: 0 ;
+    visibility: none;
+}
 
 .hero-swiper{
     height: auto;
@@ -1387,6 +1390,7 @@ align-items: center;
 .hero-swiper-wrapper{
     background-color: rgb(255, 255, 255) ;
     width: 100%;
+    z-index: 10000;
     max-height: inherit !important;
     position: relative;
 }
@@ -3004,18 +3008,32 @@ color: #BAC4C5;
    
 
 }
-.swiper-button-next:not(.swiper-button-disabled){
+
+.emission-next-but.swiper-button-disabled{
+    opacity: 0 !important;
+}
+/* .swiper-button-next:not(.swiper-button-disabled){
     opacity: 1 !important;
     transition: all 0.3s !important;
-}
+} */
 .swiper-button-prev:not(.swiper-button-disabled){
     opacity: 1 !important;
     transition: all 0.3s !important;
 }
 
+.iftar-swiper-button-next:not(.swiper-button-disabled){
+    opacity: 1 !important;
+    transition: all 0.3s !important;
+}
+.iftar-swiper-button-prev:not(.swiper-button-disabled){
+    opacity: 1 !important;
+    transition: all 0.3s !important;
+}
 
-.swiper-button-prev:not(.swiper-button-disabled){
-    opacity: 1 ;
+
+
+.emission-prev-but.swiper-button-prev:not(.swiper-button-disabled){
+    opacity: 1;
     transition: all 0.3s !important;
 }
 
