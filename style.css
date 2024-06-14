@@ -1548,7 +1548,8 @@ align-items: center;
 }
 
 .drop-down-marker{
-    z-index: 99999;
+    z-index: 0;
+    pointer-events: none;
     position: absolute;
     right: 0;
 }
