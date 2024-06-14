@@ -505,6 +505,14 @@ const blackoverlay = document.querySelector(".black-overlay");
 const galleryrightbut = document.querySelector(".gallery-swipe-right");
 const com = document.querySelector(".comitted-par");
 
+
+$('.dropbtn').on("click",function(){
+  $('.dropdown-content').toggleClass("active");
+  $('.dropbtn-line').toggleClass("active");
+  $(".custom-dropdown-caret").toggleClass("active");
+  $(".dropdown-content")
+})
+
 gsap.to(".img-swiper",{
 
     scale:1.2,
@@ -516,6 +524,21 @@ gsap.to(".img-swiper",{
 }
 
 )
+
+
+gsap.to(".upcoming-diagonal",{
+
+  height:800,
+  ease: "power3.out",
+  scrollTrigger:{
+    trigger: ".upcoming-fluid",
+    start: "top 80%",
+    scrub:5,
+  }
+}
+
+)
+
 
 gsap.to(".markersecond-div",{
 
@@ -1018,7 +1041,7 @@ menuToggle.addEventListener('click', function() {
     icon2.classList.toggle('c');
     icon3.classList.toggle('b');
     body.classList.toggle('active-nav');
-  
+
 });
 
 
