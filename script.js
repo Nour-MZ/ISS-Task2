@@ -506,13 +506,17 @@ const galleryrightbut = document.querySelector(".gallery-swipe-right");
 const com = document.querySelector(".comitted-par");
 
 
-$('.dropbtn').on("click",function(){
+function removeclass(){
+  $(".black-overlay-dropdown").toggleClass("active");
   $('.dropdown-content').toggleClass("active");
   $('.dropbtn-line').toggleClass("active");
   $(".custom-dropdown-caret").toggleClass("active");
-  $(".hero-nav").toggleClass("dropdown");
-  $(".black-overlay-dropdown").toggleClass("active");
-})
+  $(".hero-nav").toggleClass("dropdown"); 
+}
+
+
+$('.dropbtn').on("click", removeclass)
+$(".black-overlay-dropdown").on("click", removeclass)
 
 
 gsap.to(".img-swiper",{

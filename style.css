@@ -1342,7 +1342,7 @@ align-items: center;
     
     transform: translateY(6rem) !important;
     
-    
+    pointer-events: all;
   }
 
 #search {
@@ -1355,6 +1355,7 @@ align-items: center;
     opacity: 0;
     margin-right: 6rem;
     position: absolute;
+    pointer-events: none;
   }
 
   .dropdown-menu{
