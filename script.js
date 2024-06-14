@@ -510,8 +510,10 @@ $('.dropbtn').on("click",function(){
   $('.dropdown-content').toggleClass("active");
   $('.dropbtn-line').toggleClass("active");
   $(".custom-dropdown-caret").toggleClass("active");
-  $(".dropdown-content")
+  $(".hero-nav").toggleClass("dropdown");
+  $(".black-overlay-dropdown").toggleClass("active");
 })
+
 
 gsap.to(".img-swiper",{
 
