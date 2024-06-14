@@ -1543,7 +1543,7 @@ align-items: center;
     background-color: #f1f1f1;
     padding-bottom: 3rem;
     padding-top: 3rem;
-   overflow: hidden;
+    overflow: hidden;
     
 }
 
@@ -1551,7 +1551,15 @@ align-items: center;
     z-index: 0;
     pointer-events: none;
     position: absolute;
-    right: 0;
+    right: -10rem;
+    top: -8rem;
+    height:40rem;
+}
+
+.drop-down-marker>img{
+    opacity: 0.75;
+    height: 100%;
+    width: auto;
 }
 
 .hero-nav.active .drop-down-container{
