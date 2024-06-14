@@ -517,11 +517,12 @@ function removeclass(){
   $('.dropbtn-line').toggleClass("active");
   $(".custom-dropdown-caret").toggleClass("active");
   $(".hero-nav").toggleClass("dropdown"); 
+
 }
 
 
-$('.dropbtn').on("click", removeclass)
-$(".black-overlay-dropdown").on("click", removeclass)
+$('.dropbtn').hover( removeclass)
+$(".dropdown-content").hover( removeclass)
 
 
 gsap.to(".img-swiper",{

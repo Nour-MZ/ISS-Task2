@@ -22,9 +22,20 @@
     
 </head>
 <body class="">
+
+    <!-- <div class="preloader">
+        <div class="triangle triangle--one">
+            <div class="triangle triangle--two"></div>
+            <div class="triangle triangle--three"></div>
+            <div class="triangle triangle--four"></div>
+        </div>
+</div> -->
+
     <div class="preloader">
         <div class="logo-preloader">
+            
             <img src="Assets/colored-logo.png" alt="">
+            
         </div>
         <div class="loader"></div>
       </div>
@@ -502,7 +513,7 @@
             <div class="side-personal">
                 <img src="Assets/personal.png" class="img-fluid">
             </div>
-            <div class="side-globe my-2">
+            <div class="side-globe">
                 <img src="Assets/earth.png" class="img-fluid">
             </div>
             <div class="side-poll">
@@ -518,7 +529,7 @@
             <div class="hero-container "> 
                 <div class="black-overlay-dropdown"></div>
 
-                <div class="hero-nav  w-100">
+                <div class="hero-nav">
                     <div class="nav-container container">
                         <div class="nav-logo navbar-brand" href="#">
                             <img src="assets/logo.png" alt="Logo" class="white-logo img-fluid">
@@ -529,8 +540,9 @@
                             <a class="nav-link " href="#">About CCED</a>
                             <a class="nav-link" href="#">HSE</a>
                             <a class="nav-link" href="#">Org Chart</a>
-                            <div class="dropdowner nav-link">
+                            <div class="dropdowner ">
                                 <button class="dropbtn">
+                                    <div class="dropbtn-holder"></div>
                                     <div class="dropbtn-line"></div>
                                   <div class="drop-down-button-title-div">Dropdown</div>
                                   <i class="fa fa-caret-down custom-dropdown-caret"></i>
@@ -552,23 +564,23 @@
                                                 </div>
                                                 <div class="col">
                                                     <ul class="list-ul">
-                                                        <li class="nav-link"><a href="">Citrix</a></li>
-                                                        <li class="nav-link"><a href="">Employee Emergency Details</a></li>
-                                                        <li class="nav-link"><a href="">EPA</a></li>
+                                                        <li class="nav-link"><a href="">ERP Servicedesk</a></li>
+                                                        <li class="nav-link"><a href="">GIS Emergency Details</a></li>
+                                                        <li class="nav-link"><a href="">ICT Online Forms</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col">
                                                     <ul class="list-ul">
-                                                        <li class="nav-link"><a href="">Citrix</a></li>
-                                                        <li class="nav-link"><a href="">Employee Emergency Details</a></li>
-                                                        <li class="nav-link"><a href="">EPA</a></li>
+                                                        <li class="nav-link"><a href="">ICT Servicedesk</a></li>
+                                                        <li class="nav-link"><a href="">OCPR Public</a></li>
+                                                        <li class="nav-link"><a href="">OCTR Public</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col">
                                                     <ul class="list-ul">
-                                                        <li class="nav-link"><a href="">Citrix</a></li>
-                                                        <li class="nav-link"><a href="">Employee Emergency Details</a></li>
-                                                        <li class="nav-link"><a href="">EPA</a></li>
+                                                        <li class="nav-link"><a href="">Time attendance</a></li>
+                                                        <li class="nav-link"><a href="">Webmail</a></li>
+                                                        <li class="nav-link"><a href=""></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -621,11 +633,10 @@
                             <div class="carousel-nav-div">
                                 <div class="carousel-number">01</div>
                                 <div class="carousel-buttons">
-                                    <div class="hero-swiper-left carousel-but left-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <img src="Assets/right arrow.svg" class="left-arrow" alt="" srcset="">
+                                    <div class="hero-swiper-left carousel-but left-arrow" type="button">
+    
                                     </div>
-                                      <div class="hero-swiper-right carousel-but right-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <img src="Assets/right arrow.svg" class="" alt="" srcset="">
+                                      <div class="hero-swiper-right carousel-but right-arrow" type="button">
                                       </div>
                                 </div>
                             </div>
@@ -648,10 +659,8 @@
                                 <div class="carousel-number">02</div>
                                 <div class="carousel-buttons">
                                     <div class="hero-swiper-left carousel-but left-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <img src="Assets/right arrow.svg" class="left-arrow" alt="" srcset="">
                                     </div>
                                       <div class="hero-swiper-right carousel-but right-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <img src="Assets/right arrow.svg" class="" alt="" srcset="">
                                       </div>
                                 </div>
                             </div>
@@ -674,10 +683,8 @@
                                 <div class="carousel-number">03</div>
                                 <div class="carousel-buttons">
                                     <div class="hero-swiper-left carousel-but left-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <img src="Assets/right arrow.svg" class="left-arrow" alt="" srcset="">
                                     </div>
                                       <div class="hero-swiper-right carousel-but right-arrow" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <img src="Assets/right arrow.svg" class="" alt="" srcset="">
                                       </div>
                                 </div>
                             </div>
@@ -699,13 +706,13 @@
                 <div class="absolute-markero d-none d-lg-block">
                     <img src="Assets/marker.png" alt="">
                 </div>
-                <div class="swiper-button-next carousel-upcoming-button  emission-next-but">
+                <div class="swiper-button-next hero-swiper-right carousel-upcoming-button  emission-next-but">
                     
-                    <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                   
                 </div>
-                <div class="swiper-button-prev left-arrow carousel-upcoming-button emission-prev-but">
+                <div class="swiper-button-prev  hero-swiper-left left-arrow  right carousel-upcoming-button emission-prev-but">
                     
-                    <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                   
                 </div>
             
             
@@ -783,11 +790,11 @@
                         <div class="col-12 carousel-whole-container col-xl-8  d-xl-block">
                             <div class="upcoming-carousel">
                                 <div class="carousel-upcoming-buttons">
-                                    <button class="carousel-upcoming-button left-arrow d-none d-lg-flex" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
-                                        <img src="Assets/right arrow.svg" alt="" srcset="">
+                                    <button class="carousel-upcoming-button real-carousel-left left-arrow d-none d-lg-flex" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="prev">
+                                      
                                       </button>
-                                      <button class="carousel-upcoming-button  d-none d-lg-flex" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
-                                        <img src="Assets/right arrow.svg" alt="" srcset="">
+                                      <button class="carousel-upcoming-button  real-carousel-right d-none d-lg-flex" type="button" data-bs-target="#carousel-upcoming-control" data-bs-slide="next">
+                                       
                                       </button>
                                 </div>
                                 <div class="announcment">
@@ -1103,8 +1110,8 @@
                         </div>
                        </div>
                     </div>
-                    <div class="swiper-button-prev left-arrow carousel-upcoming-button gallery-swipe-left"><img src="Assets/right arrow.svg" alt="" srcset=""></div>
-                    <div class="swiper-button-next carousel-upcoming-button gallery-swipe-right"><img src="Assets/right arrow.svg" alt="" srcset=""></div>
+                    <div class="swiper-button-prev left-arrow carousel-upcoming-button gallery-swipe-left"></div>
+                    <div class="swiper-button-next carousel-upcoming-button  gallery-swipe-right"></div>
                     
                     
                   </div>
@@ -1185,13 +1192,13 @@
                     </button> 
                 </div>
                 <div class="button-div d-block d-xl-none">
-                <a href="" class="w-100">
-                    <button class="btn rounded-pill  text-center" id="browse-button-s">
+                    <a href="" class="">
+                        <button class="btn rounded-pill  text-center" id="browse-button-s">
                     
                             Browse Media
                     
-                    </button> 
-                </a>
+                        </button> 
+                    </a>
                 </div>
             </div>
             
@@ -1224,11 +1231,11 @@
                     </div>
                     <div class="iftar-modal-body modal-body">
                         
-                        <div class="swiper-button-next swipe-but iftar-swiper-button-next carousel-upcoming-button z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                        <div class="swiper-button-next swipe-but iftar-swiper-button-next carousel-upcoming-button">
+                            
                         </div>
-                        <div class="swiper-button-prev .swiper-button-disabled swipe-but iftar-swiper-button-prev carousel-upcoming-button z-3">
-                            <img src="Assets/right arrow.svg" alt="" class="img-fluid">
+                        <div class="swiper-button-prev swiper-button-disabled  swipe-but iftar-swiper-button-prev carousel-upcoming-button">
+                            
 
                         </div>
                       <!-- Swiper -->
