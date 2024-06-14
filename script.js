@@ -1,5 +1,10 @@
 gsap.registerPlugin(ScrollTrigger) 
 
+window.addEventListener('load', function(){
+    $(".preloader").addClass("remove");
+
+})
+
 
 $(document).ready(function() {
   $(document).on('click', '.carder', function(e) {
