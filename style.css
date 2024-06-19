@@ -235,7 +235,7 @@ body.active-nav{
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 40vw;
+    width: 32vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #F2F2F2;
@@ -586,7 +586,7 @@ background-color: #d6f7fa  ;
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 40vw;
+    width: 32vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #F2F2F2;
@@ -710,7 +710,7 @@ a{
     margin-left: var(--nav-height);
     height: calc(100vh - var(--nav-height));
     transform: translateX(-62.5rem);
-    width: 40vw;
+    width: 32vw;
     opacity: 0;
     left: 0;
     border-left: 0.1rem solid #E1E1E1;
@@ -1049,7 +1049,10 @@ a{
     z-index: 1000;  
     animation-duration: 1s;
     animation-name: fadein-opac;
+
 }
+
+
 
 .hero-nav.dropdown{
     background-color: white;
@@ -1196,7 +1199,11 @@ a{
     height: 100%;
     transition: all 0.5s 1s;
     opacity: 1;
+    
+
 }
+
+
 
 .nav-menu>.nav-link{
     font-family: var(--font-book);
@@ -1600,7 +1607,7 @@ transform: rotate(180deg);
     top: 2rem;
     position: absolute;
     background-color: pink;
-    transform: translateY(-1rem);
+    transform: translateY(-1rem) translateZ(-30px);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -1612,9 +1619,10 @@ transform: rotate(180deg);
 
 .dropdown-content.active{
     pointer-events: all;
-    z-index: 0;
+   
+    z-index: -1;
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0) translateZ(30px);
     visibility: visible;
 }
 
@@ -3388,22 +3396,14 @@ background-size: 15%;
   }
   @media (max-width: 650px) {
    
-    .personal-section{
-        width: calc(100% - var(--nav-height)) !important;
-      
-    }
-    .quick-section{
-        width: calc(100% - var(--nav-height)) !important;
-    }
     
-    .poll-section{
-        width: calc(100% - var(--nav-height)) !important;
-    }
    
     
     
 }
   @media (max-width: 800px) {
+
+    
     .hero-swiper{
         height: auto;
         height: 75vh;
@@ -3539,6 +3539,7 @@ background-size: 15%;
 
 
 @media (max-width: 1200px) {
+   
     .teams-text>a{
        
         font-size: 0.7em;
@@ -4032,6 +4033,23 @@ background-size: 15%;
         justify-content: space-between;
         align-items: flex-end;
     }
+   
+}
+
+
+@media (max-width: 1100px){
+  
+.personal-section{
+    width: calc(100% - var(--nav-height)) !important;
+  
+}
+.quick-section{
+    width: calc(100% - var(--nav-height)) !important;
+}
+
+.poll-section{
+    width: calc(100% - var(--nav-height)) !important;
+}
    
 }
 

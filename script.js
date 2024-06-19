@@ -130,7 +130,7 @@ $('.search-bar-personal').on('keyup', function() {
         $(this).css('display', 'none');
       }
       
-      else if (cardTitle.includes(searchTerm) || cardText.includes(searchTerm)) {
+      else if (cardTitle.startsWith(searchTerm)) {
           $(this).css('display', 'block'); // Show the card
       } 
       
