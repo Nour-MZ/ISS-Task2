@@ -388,7 +388,7 @@ body.active-nav{
     top: 0;
     left: 0;
     z-index: -2;
-    box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.1), 0 0.3rem 1.2rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .carder.active{
@@ -468,30 +468,30 @@ body.active-nav{
 } */
  
 .personal-info{
-   border-bottom: 0;
+
     margin-top: -1rem;
     opacity:1;
     z-index: -1;
-    height: 0;
-    opacity: 0;
+    overflow: hidden;
+    opacity: 1;
     margin-bottom: 1rem;
-    transition: all 0.3s;
-    z-index: -1;
+    z-index: 99;
     
-    transform: translateY(-13rem);
+   
+ 
     /* animation: heighanim 0.5s 5s; */
     
 
 }
-
+/* 
 .personal-info.active{
-    transform: translateY(-0.02rem);
+    transform: translateY(0);
     z-index: 1;
     opacity: 1;
     height: 100%;
     display: block;
    
-}
+} */
 
 .personal-info-div{
     display: flex;
@@ -502,15 +502,21 @@ body.active-nav{
     
 }
 .personal-back{
+ 
     border: none !important;
-    
+    margin-top: -100%;
     background-color: #FCFCFC;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.1), 0 0.3rem 1.2rem 0 rgba(0, 0, 0, 0.19);
-    clip-path: inset(0px -1.2rem -1.2rem -1.2rem);
+    transition: all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.personal-back.active{
+    margin-top: 0;
+    z-index: 999;
 }
 .personal-info-div:last-child{
     margin-bottom: 1rem;
@@ -548,8 +554,9 @@ body.active-nav{
     font-family: var(--font-roman);
     padding-top: 0rem;
     font: 1.5rem;
-    z-index: 4;
+    border-bottom: 1px solid #E9E9E9;
     background-color: #F0F9FA ;
+
     transition: all 0.4s;
 }
 .personal-connect-microsoft:hover{
@@ -1049,7 +1056,6 @@ a{
     z-index: 1000;  
     animation-duration: 1s;
     animation-name: fadein-opac;
-
 }
 
 
@@ -1124,6 +1130,7 @@ a{
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    z-index: inherit;
     
 }
 
@@ -1199,7 +1206,7 @@ a{
     height: 100%;
     transition: all 0.5s 1s;
     opacity: 1;
-    
+    z-index: inherit;
 
 }
 
@@ -1601,18 +1608,21 @@ transform: rotate(180deg);
     font-size: 1.05rem;
     padding-right: 0.4rem;
 }
-
+.dropdowner{
+    z-index: inherit;
+}
 .dropdown-content{
     left: 0;
     top: 2rem;
     position: absolute;
     background-color: pink;
-    transform: translateY(-1rem);
+    transform: translateY(-1rem) ;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
     transition: all 0.8s;
-    z-index: -1;
+    z-index: 1000;
+    
    
     /* display: none; */
 }

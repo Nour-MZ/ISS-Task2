@@ -41,7 +41,7 @@ $(function() {
       // })
 
       arrow = $(this).find(".arrow-down")
-      info = $(this).closest('.card-container').find('.personal-info');
+      info = $(this).closest('.card-container').find('.personal-info').find('.personal-back');
 
       arrow.toggleClass("active");
       info.toggleClass("active"); // Toggle the class
@@ -53,11 +53,6 @@ $(function() {
         
       }
       else{
-      
-       
-       
-
-        console.log("deactivated")
       }
       e.preventDefault();
   });
