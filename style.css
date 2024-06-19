@@ -323,9 +323,9 @@ body.active-nav{
 }
 
 .search-group-personal{
-    margin-bottom: 1rem !important;
-    margin-top: 1rem !important;
-    height: 2.8rem !important;
+    margin-bottom: 1.8rem !important;
+    margin-top: 1.8rem !important;
+    height: 3rem !important;
     display: flex;
      border: none !important;
 
@@ -334,6 +334,7 @@ body.active-nav{
 .search-bar-personal{
     height: 100%;
     border: none !important;
+ 
   
 }
 
