@@ -302,17 +302,17 @@ body.active-nav{
 }
 
 
-.close-personal>img{
+.close-personal>.close-divy>img{
     filter: invert(55%) sepia(16%) saturate(0%) hue-rotate(175deg) brightness(94%) contrast(86%);
     width: 2rem;
-    height: 2rem;
+    height: 2rem ;
     transition: transform 0.3s;
 
 }
 
 
-.close-personal:hover>img{
-    transform: scale(1.2);
+.close-personal:hover>.close-divy>img{
+    transform: scale(1.3);
     
 }
 
