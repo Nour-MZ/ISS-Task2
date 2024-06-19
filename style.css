@@ -431,6 +431,7 @@ body.active-nav{
     width: 1.2rem;
     align-self: center;
     flex-shrink: 0 !important;
+    margin-right: 1rem;
     
 }
 
@@ -476,7 +477,7 @@ body.active-nav{
     opacity: 1;
     margin-bottom: 1rem;
     z-index: 99;
-    
+       box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
    
  
     /* animation: heighanim 0.5s 5s; */
@@ -504,7 +505,7 @@ body.active-nav{
 .personal-back{
  
     border: none !important;
-    margin-top: -100%;
+    margin-top: -150%;
     background-color: #FCFCFC;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -512,6 +513,10 @@ body.active-nav{
     overflow: hidden;
     transition: all 0.4s;
     box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+}
+
+.card-container>.col-12{
+    padding: 0;
 }
 
 .personal-back.active{
@@ -554,7 +559,7 @@ body.active-nav{
     font-family: var(--font-roman);
     padding-top: 0rem;
     font: 1.5rem;
-    border-bottom: 1px solid #E9E9E9;
+
     background-color: #F0F9FA ;
 
     transition: all 0.4s;
@@ -761,6 +766,7 @@ a{
     width: 2.1rem;
     cursor: pointer;
     transition: all 0.3s;
+    margin-bottom: 0.5rem;
 }
 
 .close-poll>img{
