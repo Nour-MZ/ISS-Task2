@@ -538,6 +538,7 @@ body.active-nav{
     position: absolute;
     right: -1.9rem;
     bottom: -2.1rem;
+    pointer-events: none;
 }
 
 .marker-div-personal>img{
@@ -560,6 +561,7 @@ body.active-nav{
     font-family: var(--font-roman);
     padding-top: 0rem;
     font: 1.5rem;
+    cursor: pointer;
 
     background-color: #F0F9FA ;
 
