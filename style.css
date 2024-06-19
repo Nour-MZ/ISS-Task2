@@ -511,7 +511,7 @@ body.active-nav{
     position: relative;
     overflow: hidden;
     transition: all 0.4s;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
 }
 
 .personal-back.active{
@@ -641,7 +641,7 @@ background-color: #d6f7fa  ;
     border-radius: 0.45rem;
 
     font-family: var(--font-book);
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 0.25rem 0.8rem;   
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
     transition: all 0.7s;
     cursor: pointer;
     padding-right: 0 !important;
@@ -806,7 +806,7 @@ a{
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.25rem 0.75rem;
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
     
 }
 
