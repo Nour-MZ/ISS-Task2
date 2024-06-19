@@ -375,7 +375,7 @@ body.active-nav{
     border: none !important;
     border-bottom: 0.1rem solid #EEEEEE !important;
        display: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     transition: all 0.5s;
 }
 
@@ -471,12 +471,12 @@ body.active-nav{
  
 .personal-info{
 
-    margin-top: -1rem;
+    margin-top: -1.5rem;
     opacity:1;
     z-index: -1;
     overflow: hidden;
     opacity: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     z-index: 99;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    
@@ -499,7 +499,7 @@ body.active-nav{
     display: flex;
     margin-bottom: 0.5rem;
     margin-top: 1rem;
-    padding-left: 2rem;
+    padding-left: 2.3rem;
     padding-right: 2rem;
     
 }
@@ -571,7 +571,12 @@ background-color: #d6f7fa  ;
 }
 
 .teams-logo{
-    margin-left: 2rem;
+    margin-left: 2.3rem;
+}
+
+.teams-logo>img{
+    width: 90%;
+    height: 90%;
 }
 .teams-text{
     display: flex;
@@ -585,7 +590,7 @@ background-color: #d6f7fa  ;
     color: #009BAC;
     font-family: var(--font-roman);
     z-index: 99;
-    font-size: 1em;
+    font-size: 0.95em;
     cursor: pointer !important;
 }
 /* quick links section */
