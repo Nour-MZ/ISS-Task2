@@ -796,6 +796,7 @@ a{
     padding-top: 2rem;
 }
 .poll-answer{
+    border: 0.1rem solid transparent;
     font-family: var(--font-roman);
     font-weight: 400;
     margin-top: 1.2rem;
