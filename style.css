@@ -822,13 +822,13 @@ a{
 
 .poll-answer.active{
     color: red !important;
-    font-size: 1.1rem;
+   
 }
 
 .poll-answer.clicked{
     border: 0.1rem solid red;
     color: red !important;
-    font-size: 1.12rem;
+   
 }
 
 
