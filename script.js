@@ -305,68 +305,68 @@ function countUp(el, end, duration,sign) {
 }
 
 
-const typingobserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+// const typingobserver = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
    
-    if( !entry.isIntersecting ) {
-      var firstparo = new Typed('#first-par', {
-        strings: [' '],
-        typeSpeed: 1,
-        showCursor: false,
+//     if( !entry.isIntersecting ) {
+//       var firstparo = new Typed('#first-par', {
+//         strings: [' '],
+//         typeSpeed: 1,
+//         showCursor: false,
         
-      });
-    }
-    else
-    var firstpar = new Typed('#first-par', {
-      strings: [' ','Comitted to <br> Excellancy'],
-      typeSpeed: 30,
-      showCursor: false,
+//       });
+//     }
+//     else
+//     var firstpar = new Typed('#first-par', {
+//       strings: [' ','Comitted to <br> Excellancy'],
+//       typeSpeed: 30,
+//       showCursor: false,
       
-    });
-  });
-}, { threshold: 0.5 }); 
+//     });
+//   });
+// }, { threshold: 0.5 }); 
 
-const typingobserverx = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+// const typingobserverx = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
    
-    if( !entry.isIntersecting ) {
-      var secondparo = new Typed('#second-par', {
-        strings: [' '],
-        typeSpeed: 1,
-        showCursor: false,
+//     if( !entry.isIntersecting ) {
+//       var secondparo = new Typed('#second-par', {
+//         strings: [' '],
+//         typeSpeed: 1,
+//         showCursor: false,
         
-      });
-    }
-    else
-    var secondpar = new Typed('#second-par', {
-      strings: ['Lorem In <br> Excellancy'],
-      typeSpeed: 30,
-      showCursor: false,
+//       });
+//     }
+//     else
+//     var secondpar = new Typed('#second-par', {
+//       strings: ['Lorem In <br> Excellancy'],
+//       typeSpeed: 30,
+//       showCursor: false,
       
-    });
-  });
-}, { threshold: 0.5 }); 
+//     });
+//   });
+// }, { threshold: 0.5 }); 
 
-const typingobservery = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+// const typingobservery = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
    
-    if( !entry.isIntersecting ) {
-      var thirdparo = new Typed('#third-par', {
-        strings: [' '],
-        typeSpeed: 1,
-        showCursor: false,
+//     if( !entry.isIntersecting ) {
+//       var thirdparo = new Typed('#third-par', {
+//         strings: [' '],
+//         typeSpeed: 1,
+//         showCursor: false,
         
-      });
-    }
-    else
-    var thirdpar = new Typed('#third-par', {
-      strings: ['Flowing with <br> Excellancy'],
-      typeSpeed: 30,
-      showCursor: false,
+//       });
+//     }
+//     else
+//     var thirdpar = new Typed('#third-par', {
+//       strings: ['Flowing with <br> Excellancy'],
+//       typeSpeed: 30,
+//       showCursor: false,
       
-    });
-  });
-}, { threshold: 0.5 }); 
+//     });
+//   });
+// }, { threshold: 0.5 }); 
 
 
 
