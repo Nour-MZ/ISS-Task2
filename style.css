@@ -3508,17 +3508,24 @@ background-size: 15%;
     .gallery-swipe-left{
         display: none;
     }
-
+    .swiper-button-prev{
+        display: none !important;
+      }
     .gallery-swipe-right{
-        display: none;
+        display: none !important;
     }
 
+    .swiper-button-next{
+        display: none !important;
+    }
     .swiper-wrapper>.col{
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         width: 90%;
         flex: 1 0 80%;
     }
+
+
     .nav-logo{
         height: 3rem;
         width: 3rem;
@@ -3620,6 +3627,8 @@ background-size: 15%;
         line-height: 1rem;
       }
     
+
+      
       .upcoming-par>h1{
         font-size: 1.2rem !important;
         font-family: var(--font-black);

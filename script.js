@@ -117,9 +117,12 @@ $('.search-bar-personal').on('keyup', function() {
 
   $('.carder').each(function() { 
     $(this).css('display', 'none');
+    info = $(this).closest('.card-container').find('.personal-info').find('.personal-back');
+    info.removeClass("active");
     // Target individual cards
       var cardTitle = $(this).find('.card-title').text().toLowerCase();
       var cardText = $(this).find('.card-text').text().toLowerCase();
+      
       if(searchTerm === ""){
       
         $(this).css('display', 'none');
@@ -130,7 +133,8 @@ $('.search-bar-personal').on('keyup', function() {
       } 
       
       else {
-          $(this).css('display', 'none'); // Hide the card
+          $(this).css('display', 'none');
+          info.removeClass("active"); // Hide the card
       }
   });
 });
