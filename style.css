@@ -389,7 +389,7 @@ body.active-nav{
     top: 0;
     left: 0;
     z-index: -2;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .carder.active{
@@ -478,7 +478,7 @@ body.active-nav{
     opacity: 1;
     margin-bottom: 1rem;
     z-index: 99;
-       box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
    
  
     /* animation: heighanim 0.5s 5s; */
@@ -513,7 +513,7 @@ body.active-nav{
     position: relative;
     overflow: hidden;
     transition: all 0.4s;
-    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(119, 119, 119, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
 }
 
 .card-container>.col-12{
@@ -647,8 +647,7 @@ background-color: #d6f7fa  ;
     border-radius: 0.45rem;
 
     font-family: var(--font-book);
-    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
-    transition: all 0.7s;
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(119, 119, 119, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
     cursor: pointer;
     padding-right: 0 !important;
     padding-left: 0.75rem !important;
