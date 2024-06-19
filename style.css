@@ -273,8 +273,8 @@ body.active-nav{
     background-color: white;
 
     padding-left: 2rem;
-    padding-top: 1rem;
-
+    padding-top: 0.7rem;
+    padding-bottom: 0rem;
     padding-right: 1.5rem;
     font-family: var(--font-heavy);
 }
